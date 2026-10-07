@@ -61,7 +61,10 @@ app.get('/stats', (req, res) => {
 app.use(express.static(PUBLIC, {
   index: false,
   maxAge: '7d',
-  setHeaders(res, p) { if (p.endsWith('.webmanifest')) res.type('application/manifest+json'); }
+  setHeaders(res, p) {
+    if (p.endsWith('.webmanifest')) res.type('application/manifest+json');
+    if (p.endsWith('sw.js')) { res.set('Cache-Control', 'no-cache'); res.set('Service-Worker-Allowed', '/'); }
+  }
 }));
 app.use((req, res) => res.redirect(302, '/'));
 

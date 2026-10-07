@@ -296,6 +296,66 @@ svg.ic{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;strok
 .crop input[type=range]{width:min(320px,80vw);accent-color:#F0B54E}
 .crop .hint{color:#E6DFF2;font-size:14px}
 .crop .row{width:min(360px,88vw)}
+
+/* شب / صبية */
+.gpickr{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.gpickr button{min-height:52px;border-radius:16px;border:2px solid var(--line);background:var(--surface);font-weight:600;font-size:16px;transition:transform .2s cubic-bezier(.2,1.6,.4,1)}
+.gpickr button.on{border-color:var(--press);background:var(--sun);color:var(--on-sun);box-shadow:0 4px 0 var(--press);transform:translateY(-2px) rotate(-1.5deg)}
+.gpickr button:nth-child(2).on{background:var(--rose);color:var(--on-deep);transform:translateY(-2px) rotate(1.5deg)}
+/* أدوات الريس */
+.hostgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+.hostgrid .btn{min-height:52px;font-size:15px}
+.hostmini{display:flex;justify-content:center;gap:6px}
+.hostmini button{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:12px;font-size:14px;font-weight:500;color:var(--ink2)}
+.hostmini button svg{width:16px;height:16px}
+.hostmini button:active{background:var(--bg2)}
+.iconbtn.sm{width:32px;height:32px;border-radius:10px;flex:none}.iconbtn.sm svg{width:14px;height:14px}
+.extras .prefix{border-color:var(--line)}
+.exlist{display:grid;gap:6px;margin-top:12px}
+.exi{display:flex;align-items:center;gap:10px;padding:8px 12px 8px 8px;border-radius:14px;background:var(--bg2);font-size:14px;font-weight:500}
+.exi span{flex:1;min-width:0}
+.secret{width:84px;height:84px;margin:0 auto;border-radius:28px;background:var(--plum);color:var(--on-deep);display:grid;place-items:center;border:2px solid var(--press);box-shadow:0 6px 0 var(--press);animation:bob 3s ease-in-out infinite}
+.secret svg{width:40px;height:40px}
+.nicks{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:4px}
+.nk{font-family:var(--fd);font-size:18px;padding:3px 14px;border-radius:12px;background:color-mix(in srgb,var(--pf) 18%,transparent)}
+/* النتيجة النهائية */
+.seg button svg{width:16px;height:16px;vertical-align:-3px;margin-inline-end:4px}
+.prow{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1.5px dashed var(--line)}
+.prow:last-child{border:0}
+.prk{width:22px;text-align:center;font-family:var(--fd);font-size:20px;color:var(--ink2);padding-top:12px;flex:none}
+.pn{font-family:var(--fd);font-size:21px;line-height:1.5;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pn.sm{font-size:17px}
+.pc{font-family:var(--fb);font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--sun);color:var(--on-sun)}
+.tchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tchip{display:inline-flex;align-items:center;gap:4px;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--sea) 16%,var(--surface));border:1.5px solid color-mix(in srgb,var(--sea) 60%,transparent)}
+.tchip svg{width:13px;height:13px}
+button.tchip{cursor:pointer}
+button.tchip.off{background:transparent;border-style:dashed;border-color:var(--line);color:var(--ink2);text-decoration:line-through}
+.zero{font-size:14px;color:var(--ink2);font-style:italic}
+.qrow{border-bottom:1.5px dashed var(--line)}
+.qrow:last-child{border:0}
+.qhead{display:flex;align-items:center;gap:12px;width:100%;padding:12px 0}
+.qi2{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--pc);color:var(--pf);flex:none}
+.qi2 svg{width:20px;height:20px}
+.qt{display:block;font-size:14px;font-weight:600;line-height:1.6}
+.qw{display:block;font-size:13px;color:var(--ink2)}
+.qw em{font-style:normal;color:var(--rose)}
+.chev{flex:none;color:var(--ink2);transition:transform .25s}
+.chev svg{width:18px;height:18px;transform:rotate(90deg)}
+.qrow.open .chev{transform:rotate(180deg)}
+.qbody{padding:2px 0 16px;animation:rise .35s both}
+.curate{margin-top:18px}
+.curate .ch{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.curate h3{font-size:20px}
+.crow{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1.5px dashed var(--line)}
+.crow:last-of-type{border:0}
+.install{display:flex;align-items:center;gap:14px;margin-top:22px;padding:16px;border-radius:22px;background:var(--surface);border:2px solid var(--press);box-shadow:0 6px 0 var(--press)}
+.iic img{width:56px;height:56px;border-radius:16px;display:block}
+.it{font-family:var(--fd);font-size:21px;line-height:1.4}
+.install2{margin-top:12px}
+.steps{font-size:14px;line-height:2.1;color:var(--ink2);padding:4px 6px}
+.steps span{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:var(--sun);color:var(--on-sun);font-weight:700;font-size:12px;margin-inline-end:6px}
+.steps svg{width:15px;height:15px;vertical-align:-2px}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01s!important;animation-iteration-count:1!important;transition:none!important}}
 @media (min-width:700px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style>
@@ -308,26 +368,26 @@ svg.ic{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;strok
 "use strict";
 /* ================= البيانات ================= */
 const QS=[
- {i:'sigh',t:'بيشتكي من وضعه'},
- {i:'nag',t:'نقّاق'},
- {i:'gift',t:'كريم وجومرت'},
- {i:'clock',t:'بيتأخر عالمواعيد'},
- {i:'laugh',t:'بيضحك عأتفه نكتة'},
- {i:'moon',t:'بينعس أول واحد بالسهرة'},
- {i:'phone',t:'بيحكي عالتلفون ساعة'},
- {i:'food',t:'بياكل وما بيشبع'},
- {i:'bulb',t:'بيعطي نصايح وما بيطبّقها'},
- {i:'cap',t:'عامل حالو فهمان بكل شي'},
- {i:'lost',t:'بيضيّع أغراضو'},
- {i:'drama',t:'بيعمل من الحبة قبة'},
- {i:'heart',t:'قلبو أبيض وبيسامح بسرعة'},
- {i:'mobile',t:'لاصق بالموبايل بالقعدة'},
- {i:'diet',t:'بيبلّش رجيم كل يوم اتنين'},
- {i:'lock',t:'كاتم أسرار'},
- {i:'spark',t:'بيقلب القعدة ضحك'},
- {i:'cake',t:'بينسى أعياد الميلاد'},
- {i:'camera',t:'بيتصوّر سيلفي بكل مناسبة'},
- {i:'sand',t:'بيقول «خمس دقايق وبكون عندكن»'}
+ {i:'nag',t:'نقّاق وما بيعجبو العجب',m:'النقّاق',f:'النقّاقة'},
+ {i:'sigh',t:'بيشكي ويبكي عكل شي',m:'الشكّاي',f:'الشكّاية'},
+ {i:'gift',t:'إيدو مفتوحة وكريم وجومرت',m:'الكريم',f:'الكريمة'},
+ {i:'laugh',t:'دمّو خفيف وبيقلب القعدة ضحك',m:'خفيف الدم',f:'خفيفة الدم'},
+ {i:'shield',t:'شهم وكفو وبيوقف معك بالضيقة',m:'الشهم',f:'الشهمة'},
+ {i:'book',t:'فهيم وموسوعة متنقّلة',m:'الموسوعة',f:'الموسوعة'},
+ {i:'megaphone',t:'ظاظ بامتياز',m:'الظاظ',f:'الظاظة'},
+ {i:'repeat',t:'كرّار وبيعيد نفس القصة عشر مرات',m:'الكرّار',f:'الكرّارة'},
+ {i:'food',t:'بياكل وما بيشبع',m:'الأكول',f:'الأكولة'},
+ {i:'star',t:'مشهور وكل الناس بتعرفو',m:'المشهور',f:'المشهورة'},
+ {i:'clock',t:'بيتأخر وبيقول «خمس دقايق وبكون عندكن»',m:'ملك التأخير',f:'ملكة التأخير'},
+ {i:'bolt',t:'عصبي وخلقو ضيّق',m:'العصبي',f:'العصبية'},
+ {i:'music',t:'شغّيل أحزان وأغانيه كلها دموع',m:'شغّيل الأحزان',f:'شغّيلة الأحزان'},
+ {i:'bulb',t:'مخّو إبداعي وأفكارو ما حدا بيتوقعها',m:'المبدع',f:'المبدعة'},
+ {i:'heart',t:'قلبو أبيض وبيسامح بسرعة',m:'القلب الأبيض',f:'القلب الأبيض'},
+ {i:'lock',t:'كاتم أسرار وسرّك عندو ببير',m:'كاتم الأسرار',f:'كاتمة الأسرار'},
+ {i:'money',t:'رح يصير مليونير',m:'المليونير الجاي',f:'المليونيرة الجاية'},
+ {i:'mobile',t:'لاصق بالموبايل حتى بالقعدة',m:'أسير الموبايل',f:'أسيرة الموبايل'},
+ {i:'moon',t:'بينعس أول واحد بالسهرة',m:'نعسان السهرة',f:'نعسانة السهرة'},
+ {i:'cap',t:'بيعطي نصايح وما بيطبّقها',m:'الناصح',f:'الناصحة'}
 ];
 const ICONS={
  sigh:'<path d="M7 15h10a4 4 0 0 0 0-8 5 5 0 0 0-9.6 1.4A3.3 3.3 0 0 0 7 15z"/><path d="M9 18l-1 2M13 18l-1 2M17 18l-1 2"/>',
@@ -365,6 +425,15 @@ const ICONS={
  flag:'<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>',
  eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
  wifi:'<path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 19.5h.01"/>',
+ shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/>',
+ book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M8 7h7M8 11h5"/>',
+ megaphone:'<path d="M3 10v4h3l7 4V6L6 10z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/>',
+ repeat:'<path d="M4 11V9a3 3 0 0 1 3-3h12l-3-3M20 13v2a3 3 0 0 1-3 3H5l3 3"/>',
+ star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
+ bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+ music:'<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
+ money:'<rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 9v.01M18 15v.01"/>',
+ x:'<path d="M6 6l12 12M18 6L6 18"/>',
  group:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.3-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5c2 .7 3.2 2.6 3.5 5.5"/>'
 };
 const ic=(k,c='')=>`<svg class="ic ${c}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[k]||ICONS.spark}</svg>`;
@@ -463,12 +532,12 @@ function playerNet(code,h){
  },(sock)=>({send:msg=>sock.send({t:'up',msg})}));
 }
 
-/* ================= المدير ================= */
-function hostSave(){if(!H)return;const c={...H,players:{}};for(const k in H.players){const p=H.players[k];c.players[k]={pid:p.pid,name:p.name,photo:p.photo,host:p.host,on:p.host||p.bot,bot:p.bot,conn:p.host?'self':p.bot?'bot':null}}store.set('qa3da-host-'+H.code,c)}
+/* ================= الريس (صاحب الحالة) ================= */
+function hostSave(){if(!H)return;const c={...H,players:{}};for(const k in H.players){const p=H.players[k];c.players[k]={pid:p.pid,name:p.name,photo:p.photo,g:p.g,host:p.host,on:p.host||p.bot,bot:p.bot,conn:p.host?'self':p.bot?'bot':null}}store.set('qa3da-host-'+H.code,c)}
 function startHost(){
  ROLE='host';CODE=newCode();ME=rid();
- H={demo:DEMO,key:rid(),code:CODE,players:{},order:shuffle(QS.map((_,i)=>i)),pos:-1,phase:'lobby',cur:null,votes:{},history:[],round:0,last:null,final:null,prev:'lobby'};
- H.players[ME]={pid:ME,name:UI.profile.name.trim()||'المدير',photo:UI.profile.photo,on:true,conn:'self',host:true};
+ H={v:2,demo:DEMO,key:rid(),code:CODE,players:{},deck:[],pos:-1,queue:[],extra:[],asked:0,phase:'lobby',cur:null,votes:{},history:[],round:0,last:null,final:null,prev:'lobby',cer:0};
+ H.players[ME]={pid:ME,name:UI.profile.name.trim()||'الريس',photo:UI.profile.photo,g:UI.profile.g||'m',on:true,conn:'self',host:true};
  store.set('qa3da-me-'+CODE,ME);
  try{history.replaceState(null,'','?r='+CODE+'&h=1'+(LOCAL?'&local=1':'')+(DEMO?'&demo=1':''));}catch(e){}
  bootHostNet();
@@ -476,6 +545,7 @@ function startHost(){
 function resumeHost(saved){
  ROLE='host';H=saved;CODE=H.code;ME=store.get('qa3da-me-'+CODE);
  if(!ME||!H.players[ME]){ME=Object.keys(H.players).find(k=>H.players[k].host)}
+ if(H.final){UI.wrap={type:H.final.type||'شلة',name:H.final.name||'',photo:H.final.photo||null}}
  bootHostNet();
 }
 function bootHostNet(){
@@ -501,6 +571,7 @@ function hostMsg(cid,m){
   if(!p){p=H.players[m.pid]={pid:m.pid};p.name=cleanName(m.name)||('ضيف '+(Object.keys(H.players).length))}
   else if(m.name)p.name=cleanName(m.name)||p.name;
   if(typeof m.photo==='string'&&m.photo.startsWith('data:image/')&&m.photo.length<400000)p.photo=m.photo;
+  if(m.g==='m'||m.g==='f')p.g=m.g;else if(!p.g)p.g='m';
   p.on=true;p.conn=cid;if(cid==='bot')p.bot=true;
   if(cid!=='self'){NET.send(cid,{t:'welcome',pid:m.pid})}
   pushRoster();pushState();
@@ -513,12 +584,16 @@ function hostMsg(cid,m){
  }
 }
 const cleanName=n=>String(n||'').replace(/\s+/g,' ').trim().slice(0,22);
-function rosterList(){return Object.values(H.players).map(p=>({pid:p.pid,name:p.name,photo:p.photo||null,on:!!p.on,host:!!p.host}))}
+const cleanQ=t=>String(t||'').replace(/\s+/g,' ').replace(/^مين\s+/,'').replace(/^أ?كتر\s+حدا\s+/,'').replace(/[؟?]+\s*$/,'').trim().slice(0,60);
+function rosterList(){return Object.values(H.players).map(p=>({pid:p.pid,name:p.name,photo:p.photo||null,g:p.g||'m',on:!!p.on,host:!!p.host}))}
 function pushRoster(){ROSTER=rosterList();NET&&NET.all({t:'roster',players:ROSTER});hostSave();render()}
+function leftCount(){return Math.max(0,H.deck.length-(H.pos+1))+H.queue.length}
 function pubState(){
- return{phase:H.phase,code:H.code,asked:H.history.length,left:H.order.length-(H.pos+1),q:H.cur,voted:Object.keys(H.votes),
+ const end=H.phase==='cer'||H.phase==='final';
+ return{phase:H.phase,code:H.code,asked:H.asked,left:H.phase==='lobby'?QS.length+H.extra.length:leftCount(),q:H.cur,voted:Object.keys(H.votes),
+  extra:H.phase==='lobby'?H.extra:null,
   result:H.phase==='reveal'?H.last:null,
-  history:H.phase==='final'?H.history:null,final:H.phase==='final'?H.final:null};
+  history:end?H.history:null,final:end?H.final:null,cer:H.phase==='cer'?H.cer:null};
 }
 function pushState(){S=pubState();NET&&NET.all({t:'state',s:S});hostSave();render()}
 function compute(){
@@ -529,16 +604,56 @@ function compute(){
  const winners=top.length?top.filter(t=>t.pts===top[0].pts&&t.first===top[0].first).map(t=>t.pid):[];
  return{key:H.cur.key,q:H.cur,top,winners,voters};
 }
+/* بيحفظ نتيجة السؤال الحالي (انكشف أو لا). إذا ما حدا صوّت ما بينحفظ شي */
+function saveCur(revealed){
+ if(!H.cur||H.phase!=='q')return null;
+ const r=compute();
+ if(!r.voters)return r;
+ const i=H.history.findIndex(x=>x.key===r.key);
+ const prev=i>=0?H.history[i]:null;
+ r.revealed=!!(revealed||(prev&&prev.revealed));
+ if(prev)H.history[i]=r;else{H.history.push(r);NET.stat({ev:'round',q:H.cur.t,custom:!!H.cur.custom,voters:r.voters})}
+ return r;
+}
 const HOST={
- start(){NET.stat({ev:'start',n:Object.values(H.players).filter(p=>p.on).length});HOST.next()},
- next(){H.pos++;if(H.pos>=H.order.length){H.pos=H.order.length-1;return}
-  const q=QS[H.order[H.pos]];H.round++;H.cur={key:'r'+H.round,i:q.i,t:q.t};H.votes={};H.phase='q';pushState();botsVote()},
- custom(text){text=String(text||'').trim().slice(0,60);if(!text)return;H.round++;H.cur={key:'r'+H.round,i:'pen',t:text,custom:true};H.votes={};H.phase='q';pushState();botsVote()},
- reveal(){if(H.phase!=='q')return;const r=compute();NET.stat({ev:'round',q:H.cur.t,custom:!!H.cur.custom,voters:r.voters});H.last=r;if(r.winners.length)H.history.push(r);H.phase='reveal';pushState()},
- skip(){if(H.pos+1<H.order.length)HOST.next()},
- wrap(){H.prev=H.phase;H.phase='wrap';pushState()},
- unwrap(){H.phase=H.prev==='wrap'?'lobby':H.prev;pushState()},
- finalize(){const w=UI.wrap;H.final={type:w.type,name:cleanName(w.name),photo:w.photo};NET.stat({ev:'final',type:w.type,rounds:H.history.length});H.phase='final';pushState()}
+ start(){
+  H.deck=shuffle(QS.map(q=>({i:q.i,t:q.t,m:q.m,f:q.f})).concat(H.extra.map(t=>({i:'pen',t,custom:true}))));
+  H.pos=-1;H.queue=[];
+  NET.stat({ev:'start',n:Object.values(H.players).filter(p=>p.on).length});HOST.next();
+ },
+ next(){
+  let q=null;
+  if(H.queue.length)q=H.queue.shift();
+  else if(H.pos+1<H.deck.length){H.pos++;q=H.deck[H.pos]}
+  if(!q){HOST.wrap();return}
+  H.round++;H.asked++;H.cur={key:'r'+H.round,...q};H.votes={};H.phase='q';H.last=null;pushState();botsVote();
+ },
+ reveal(){if(H.phase!=='q')return;const r=saveCur(true);H.last=r;H.phase='reveal';pushState()},
+ silentNext(){if(H.phase!=='q')return;saveCur(false);HOST.next()},
+ pass(){if(H.phase!=='q')return;H.votes={};H.asked=Math.max(0,H.asked-1);H.cur=null;H.phase='reveal';H.last=null;
+  if(leftCount())HOST.next();else HOST.wrap()},
+ addExtra(t){t=cleanQ(t);if(!t)return false;if(H.extra.length>=30)return false;H.extra.push(t);pushState();return true},
+ rmExtra(i){H.extra.splice(Number(i),1);pushState()},
+ custom(text,now){text=cleanQ(text);if(!text)return false;
+  if(H.phase==='lobby'){return HOST.addExtra(text)}
+  H.queue.unshift({i:'pen',t:text,custom:true});
+  if(now||H.phase==='reveal')HOST.next();else pushState();
+  return true},
+ wrap(){if(H.phase==='q')saveCur(false);if(H.phase!=='wrap')H.prev=H.phase;H.phase='wrap';pushState()},
+ unwrap(){const p=H.prev;
+  H.phase=(p==='q'&&H.cur)?'q':(p==='final'&&H.final)?'final':(p==='lobby'&&!H.asked)?'lobby':'reveal';
+  pushState();if(H.phase==='q')botsVote()},
+ finalize(mode){
+  const w=UI.wrap;const hide=(H.final&&H.final.hide)||{};
+  H.final={type:w.type,name:cleanName(w.name),photo:w.photo,hide};
+  NET.stat({ev:'final',type:w.type,rounds:H.history.length});
+  if(mode==='cer'&&H.history.length){H.cer=0;H.phase='cer'}else H.phase='final';
+  pushState();
+ },
+ cerNext(){if(H.phase!=='cer')return;H.cer++;if(H.cer>H.history.length){H.phase='final'}pushState()},
+ toFinal(){H.phase='final';pushState()},
+ back(){H.prev='final';H.phase='wrap';pushState()},
+ toggleHide(pid,key){if(!H.final)return;const h=H.final.hide;const a=h[pid]||(h[pid]=[]);const i=a.indexOf(key);if(i>=0)a.splice(i,1);else a.push(key);if(!a.length)delete h[pid];pushState()}
 };
 
 
@@ -552,7 +667,7 @@ function botFace(i){const c=document.createElement('canvas');c.width=c.height=20
  x.fillStyle='#2A211B';x.beginPath();x.arc(84,86,4,0,7);x.arc(116,86,4,0,7);x.fill();
  x.strokeStyle='#2A211B';x.lineWidth=3;x.lineCap='round';x.beginPath();x.arc(100,98,14,.2*Math.PI,.8*Math.PI);x.stroke();
  return c.toDataURL('image/jpeg',.85)}
-function addBots(){BOTS.forEach((n,i)=>setTimeout(()=>{if(!H||H.phase==='final')return;hostMsg('bot',{t:'join',pid:'bot'+i,name:n,photo:i===2?null:botFace(i)})},700+i*650))}
+function addBots(){BOTS.forEach((n,i)=>setTimeout(()=>{if(!H||H.phase==='final'||H.phase==='cer')return;hostMsg('bot',{t:'join',pid:'bot'+i,name:n,g:['m','f','m','f','f'][i],photo:i===2?null:botFace(i)})},700+i*650))}
 function botsVote(){
  if(!H||!H.demo)return;const key=H.cur&&H.cur.key;const ids=Object.keys(H.players);
  Object.values(H.players).filter(p=>p.bot&&p.on).forEach(p=>setTimeout(()=>{
@@ -565,9 +680,9 @@ function botsVote(){
 function joinAsPlayer(){
  ROLE='player';UI.screen='game';
  if(!ME){ME=rid()}
- store.set('qa3da-p-'+CODE,{pid:ME,name:UI.profile.name,photo:UI.profile.photo});
+ store.set('qa3da-p-'+CODE,{pid:ME,name:UI.profile.name,photo:UI.profile.photo,g:UI.profile.g});
  let resend=null;
- const sendJoin=()=>NET.send({t:'join',pid:ME,name:UI.profile.name,photo:UI.profile.photo});
+ const sendJoin=()=>NET.send({t:'join',pid:ME,name:UI.profile.name,photo:UI.profile.photo,g:UI.profile.g});
  NET=playerNet(CODE,{
   up(){UI.conn='up';sendJoin();clearInterval(resend);resend=setInterval(()=>{if(!UI.joined)sendJoin();else clearInterval(resend)},2500);render()},
   down(why){UI.conn=why==='nohost'?'nohost':why==='full'?'full':'down';UI.joined=false;UI.netErr=why;render()},
@@ -595,6 +710,11 @@ function colOf(pid){const i=ROSTER.findIndex(p=>p.pid===pid);return PCOL[(i<0?0:
 function qcolOf(key){const n=parseInt(String(key||'').replace(/\D/g,''))||0;return QCOL[n%4]}
 function avatarHTML(p,size,ex='',cls=''){const c=p&&p.pid?colOf(p.pid):'sun';
  return `<div class="av c-${c} ${cls}" style="${ex}width:${size}px;height:${size}px;font-size:${Math.round(size*.46)}px">${p&&p.photo?`<img src="${p.photo}" alt="">`:esc(initial(p&&p.name))}</div>`}
+const isF=pid=>{const p=byId(pid);return !!(p&&p.g==='f')};
+const meF=()=>ROLE&&byId(ME)?isF(ME):UI.profile.g==='f';
+const youTag=pid=>pid===ME?(isF(pid)?' (إنتِ)':' (إنت)'):'';
+/* اللقب القصير حسب شب/صبية */
+function nick(q,pid){if(!q)return'';if(q.custom||!q.m)return q.t;return isF(pid)&&q.f?q.f:q.m}
 function topBar(right){
  return `<div class="top"><div class="brand"><span class="cards"><i></i><i></i></span>${right||'قعدة رواق'}</div>
  <button class="iconbtn" data-a="theme" aria-label="الوضع">${ic(themeNow()==='dark'?'sun':'moonT')}</button></div>`;
@@ -602,9 +722,9 @@ function topBar(right){
 const SIG=`<div class="sig">إعداد م. إياد حلوبي</div>`;
 function vCover(){
  const join=!!CODE&&ROLE!=='host';
- const cyc=['نقّاق','كريم وجومرت','بيتأخر عالمواعيد','كاتم أسرار','بيعمل من الحبة قبة','لاصق بالموبايل'];
+ const cyc=['نقّاق','كريم وجومرت','شهم وكفو','كاتم أسرار','رح يصير مليونير','لاصق بالموبايل'];
  const orbs=[['س','sea',[6,8]],['ر','rose',[82,4]],['ل','plum',[2,66]],['ج','olive',[86,62]],['م','sun',[44,86]]];
- const tick=['كل واحد بيلعب من موبايلو','بيطلع سؤال: مين أكتر حدا…؟','بتصوّت لواحد، اتنين أو تلاتة بالترتيب','المدير بيكشف النتيجة عالكل سوا','وبالآخر صورة للقعدة بألقاب الكل'];
+ const tick=['كل واحد بيلعب من موبايلو','بيطلع سؤال: مين أكتر حدا…؟','بتصوّت لواحد، اتنين أو تلاتة بالترتيب','الريس بيكشف النتيجة أو بيخبّيها للآخر','وبالآخر حفلة توزيع الألقاب'];
  const tk=tick.concat(tick).map(t=>`<span>${t}</span>`).join('');
  return `<div class="screen cover">${topBar()}
  <div class="deck" aria-hidden="true">
@@ -629,7 +749,7 @@ function vCode(){
  return `<div class="screen enter">${topBar()}
  <div><button class="tag" data-a="toCover">${ic('back')} رجوع</button></div>
  <h2 class="ptitle">شو كود القعدة؟</h2>
- <p class="muted small" style="margin:0 0 16px">الكود بيطلع عند المدير تحت الـQR</p>
+ <p class="muted small" style="margin:0 0 16px">الكود بيطلع عند الريس تحت الـQR</p>
  <input id="codeIn" class="field" data-in="codeInput" maxlength="5" inputmode="text" autocomplete="off" autocapitalize="characters" style="text-align:center;letter-spacing:.3em;font-family:var(--fd);font-size:30px;direction:ltr" value="${esc(UI.codeInput)}" placeholder="•••••">
  <div style="margin-top:16px"><button class="btn sea" data-a="codeGo">كمّل</button></div>
  ${SIG}</div>`;
@@ -644,24 +764,34 @@ function vProfile(){
  <input type="file" id="fileAva" accept="image/*" hidden data-file="ava">
  ${p.photo?`<div style="text-align:center;margin:-8px 0 14px"><button class="tag" data-a="rmAva">شيل الصورة</button></div>`:''}</div>
  <input id="nameIn" class="field" data-in="name" maxlength="22" placeholder="اسمك متل ما بتعرفك الشلة" value="${esc(p.name)}" autocomplete="off">
- <div style="margin-top:16px"><button class="btn ${host?'':'sea'}" data-a="${host?'doHost':'doJoin'}">${host?'افتح القعدة':'فوت عالقعدة'}</button></div>
+ <div class="gpickr" role="radiogroup" aria-label="شب أو صبية">
+  <button class="${p.g==='m'?'on':''}" role="radio" aria-checked="${p.g==='m'}" data-a="pickG" data-v="m">شب</button>
+  <button class="${p.g==='f'?'on':''}" role="radio" aria-checked="${p.g==='f'}" data-a="pickG" data-v="f">صبية</button>
+ </div>
+ <div class="hint2" style="text-align:center;margin-top:6px">${p.g?'':'اختار شب أو صبية حتى تطلع ألقابك صح'}</div>
+ <div style="margin-top:14px"><button class="btn ${host?'':'sea'}" data-a="${host?'doHost':'doJoin'}" ${p.g?'':'disabled'}>${host?'افتح القعدة':'فوت عالقعدة'}</button></div>
  ${SIG}</div>`;
 }
 function connBanner(){
- if(ROLE==='player'&&UI.conn!=='up')return `<div class="banner">${ic('wifi')} ${UI.conn==='nohost'?'المدير مو متصل هلأ، ناطرينو…':'عم نوصل عالقعدة…'}</div>`;
+ if(ROLE==='player'&&UI.conn!=='up')return `<div class="banner">${ic('wifi')} ${UI.conn==='nohost'?'الريس مو متصل هلأ، ناطرينو…':'عم نوصل عالقعدة…'}</div>`;
  if(ROLE==='host'&&UI.conn==='err')return `<div class="banner">${ic('wifi')} في مشكلة بالإنترنت، عم نعيد المحاولة</div>`;
  return '';
 }
 function joinUrl(){return location.origin+location.pathname+'?r='+CODE+(LOCAL?'&local=1':'')}
 function peopleHTML(){
- return ROSTER.map((p,i)=>`<div class="person" style="animation-delay:${Math.min(i,8)*.05}s"><div class="avw">${p.host?`<span class="crown">${ic('crown')}</span>`:''}${avatarHTML(p,62,'',p.on?'':'off')}</div><div class="nm">${esc(p.name)}${p.pid===ME?' (إنت)':''}</div></div>`).join('');
+ return ROSTER.map((p,i)=>`<div class="person" style="animation-delay:${Math.min(i,8)*.05}s"><div class="avw">${p.host?`<span class="crown">${ic('crown')}</span>`:''}${avatarHTML(p,62,'',p.on?'':'off')}</div><div class="nm">${esc(p.name)}${youTag(p.pid)}</div></div>`).join('');
+}
+function customBox(btnLabel,act){
+ return `<div class="custom"><label class="prefix"><span>مين أكتر حدا</span><input id="customIn" data-in="customText" maxlength="60" placeholder="كمّل السؤال…" value="${esc(UI.customText)}"></label>
+ <div class="row"><button class="btn rose" data-a="${act}">${btnLabel}</button><button class="btn ghost" data-a="customToggle" style="flex:.55">إلغاء</button></div></div>`;
 }
 function vLobby(){
  const on=ROSTER.filter(p=>p.on);
  if(ROLE==='host'){
-  const note=DEMO?`<div class="note">عرض تجريبي: اللاعبين وهميين وبيصوّتوا لحالهن، وإنت المدير. جرّب كل شي.</div>`
-   :location.protocol==='file:'?`<div class="note">الملف مفتوح من جهازك، فالـQR ما رح يوصل لحدا. ارفعه على رابط (متل GitHub Pages) وافتحه من هونيك.</div>`:'';
-  return `<div class="screen ${keyEnter('lobby')}">${topBar('إنت المدير')}
+  const note=DEMO?`<div class="note">عرض تجريبي: اللاعبين وهميين وبيصوّتوا لحالهن، وإنت الريس. جرّب كل شي.</div>`
+   :location.protocol==='file:'?`<div class="note">الملف مفتوح من جهازك، فالـQR ما رح يوصل لحدا. افتح اللعبة من رابطها على الإنترنت.</div>`:'';
+  const ex=S.extra||[];
+  return `<div class="screen ${keyEnter('lobby')}">${topBar('إنت الريس')}
   <div class="ticket">
    <div class="small muted" style="font-weight:500">خلّي الكل يمسح الكود من موبايلو</div>
    <div class="qrbox" id="qr"></div>
@@ -673,8 +803,15 @@ function vLobby(){
   </div>
   <div class="sech"><h3>مين جوّا القعدة</h3><span class="tag sun">${on.length} موجودين</span></div>
   <div class="people">${peopleHTML()}</div>
+  <div class="sech"><h3>أسئلة من عندكن</h3><span class="tag">${QS.length+ex.length} سؤال</span></div>
+  <div class="card extras">
+   <label class="prefix"><span>مين أكتر حدا</span><input id="extraIn" data-in="customText" maxlength="60" placeholder="كمّل السؤال…" value="${esc(UI.customText)}"></label>
+   <button class="btn ghost" data-a="addExtra" style="margin-top:10px">${ic('plus')} زيد السؤال</button>
+   ${ex.length?`<div class="exlist">${ex.map((t,i)=>`<div class="exi"><span>مين أكتر حدا ${esc(t)}؟</span><button class="iconbtn sm" data-a="rmExtra" data-v="${i}" aria-label="احذف">${ic('x')}</button></div>`).join('')}</div>`
+   :`<div class="hint2" style="margin-top:10px">${QS.length} سؤال جاهزين، وأسئلتكن بتنخلط معهن عشوائياً.</div>`}
+  </div>
   ${SIG}</div>
-  <div class="dock"><div class="dock-in"><div class="hint">${on.length<2?'لازم يكون في شخصين عالأقل':`${QS.length} سؤال جاهزين بالكومة`}</div>
+  <div class="dock"><div class="dock-in"><div class="hint">${on.length<2?'لازم يكون في شخصين عالأقل':'جاهزين؟'}</div>
   <button class="btn" data-a="hStart" ${on.length<2?'disabled':''}>يلا نبلّش</button></div></div>`;
  }
  const me=byId(ME)||{name:UI.profile.name,photo:UI.profile.photo};
@@ -682,7 +819,7 @@ function vLobby(){
   <div class="ticket" style="padding:28px 18px">
    ${avatarHTML(me,96,'margin:0 auto 16px;')}
    <h2 style="font-size:30px">صرت جوّا القعدة</h2>
-   <p class="muted" style="margin:4px 0 0">ناطرين المدير يبلّش اللعبة</p>
+   <p class="muted" style="margin:4px 0 0">ناطرين الريس يبلّش اللعبة</p>
    <div class="dots" style="margin-top:16px"><span></span><span></span><span></span></div>
   </div>
   <div class="sech"><h3>مين جوّا</h3><span class="tag sun">${on.length}</span></div>
@@ -690,10 +827,10 @@ function vLobby(){
   ${SIG}</div>`;
 }
 function keyEnter(k){const e=UI.lastKey!==k;UI.nextKey=k;return e?'enter':''}
-function progHTML(num){
- const total=num+Math.max(0,S.left);const n=Math.min(total,24);
+function progHTML(num,total,label){
+ total=total||num+Math.max(0,S.left);const n=Math.min(total,24);
  let segs='';for(let i=1;i<=n;i++)segs+=`<i class="${i<num?'done':i===num?'now':''}"></i>`;
- return `<div class="prog"><span>${num} / ${total}</span><div class="segs">${segs}</div></div>`;
+ return `<div class="prog"><span>${label||''}${num} / ${total}</span><div class="segs">${segs}</div></div>`;
 }
 function vQuestion(){
  const q=S.q;if(UI.rkey!==q.key){UI.rkey=q.key;UI.ranks=[]}
@@ -705,18 +842,26 @@ function vQuestion(){
  const slots=[0,1,2].map(i=>{const pid=UI.ranks[i];const p=pid&&byId(pid);
   return `<button class="slot r${i+1} ${p?'on':''}" ${p&&!voted?`data-a="unrank" data-v="${pid}"`:''}><b>${i+1}</b>${p?avatarHTML(p,30)+`<span class="nm">${esc(p.name)}</span>`:'<span>…</span>'}</button>`}).join('');
  const tiles=ppl.map(p=>{const r=UI.ranks.indexOf(p.pid);
-  return `<button class="tile ${r>=0?'sel r'+(r+1):''}" data-a="rank" data-v="${p.pid}">${r>=0?`<span class="rk">${r+1}</span>`:''}${avatarHTML(p,60)}<span class="nm">${esc(p.name)}${p.pid===ME?' (إنت)':''}</span></button>`}).join('');
+  return `<button class="tile ${r>=0?'sel r'+(r+1):''}" data-a="rank" data-v="${p.pid}">${r>=0?`<span class="rk">${r+1}</span>`:''}${avatarHTML(p,60)}<span class="nm">${esc(p.name)}${youTag(p.pid)}</span></button>`}).join('');
  const stack=online.slice(0,9).map(p=>avatarHTML(p,30,'',S.voted.includes(p.pid)?'':'off')).join('');
- const hostbar=ROLE==='host'?`<div class="hostbar">
-   <button class="btn ${nv>=online.length&&nv>0?'rose':'deep'}" data-a="hReveal" ${nv?'':'disabled'}>${ic('eye')} اكشف النتيجة</button>
-   <button class="btn ghost mini" data-a="hSkip" aria-label="تخطّى" ${S.left>0?'':'disabled'}>${ic('skip')}</button>
-   <button class="btn ghost mini" data-a="hWrap" aria-label="خلّصنا">${ic('flag')}</button></div>`:'';
+ let hostbar='';
+ if(ROLE==='host'){
+  hostbar=UI.customOpen?customBox('رح يطلع السؤال الجاي','hCustom'):`<div class="hostgrid">
+   <button class="btn ${nv>=online.length&&nv>0?'rose':'deep'}" data-a="hReveal" ${nv?'':'disabled'}>${ic('eye')} اكشف</button>
+   <button class="btn ghost" data-a="hSilent" ${S.left>0?'':'disabled'}>${ic('skip')} الجاي بلا كشف</button>
+  </div>
+  <div class="hostmini">
+   <button data-a="hPass">${ic('x')} مرّر</button>
+   <button data-a="customToggle">${ic('pen')} سؤالك</button>
+   <button data-a="hWrap">${ic('flag')} خلّصنا</button>
+  </div>`;
+ }
  const mine=voted?`<button class="btn flat" data-a="unvote"><span class="sent">${ic('check')} صوتك وصل</span><span class="muted small">· عدّل</span></button>`
   :`<button class="btn sea" data-a="vote" ${UI.ranks.length?'':'disabled'}>ثبّت صوتي</button>`;
  const fresh=UI.lastKey!=='q'+q.key;
  return `<div class="screen ${keyEnter('q'+q.key)}">${topBar()}
- ${progHTML(S.asked+1)}
- <div class="qcard c-${qcolOf(q.key)} ${fresh?'flip':''}"><span class="qn">#${S.asked+1}</span><span class="bigq">؟</span><div class="qi">${ic(q.i)}</div><div class="lead">مين أكتر حدا</div><h2>${esc(q.t)}؟</h2></div>
+ ${progHTML(S.asked)}
+ <div class="qcard c-${qcolOf(q.key)} ${fresh?'flip':''}"><span class="qn">#${S.asked}</span><span class="bigq">؟</span><div class="qi">${ic(q.i)}</div><div class="lead">مين أكتر حدا</div><h2>${esc(q.t)}؟</h2></div>
  <div class="voters"><div class="stack">${stack}</div><div class="vcount">${nv}<small> من ${online.length} صوّتوا</small></div></div>
  <div class="tray">${slots}</div>
  <div class="hint2">اختار لحد 3 بالترتيب، الأول هو الأكتر. وفيك تكتفي بواحد أو اتنين.</div>
@@ -724,13 +869,9 @@ function vQuestion(){
  ${SIG}</div>
  <div class="dock"><div class="dock-in">${mine}${hostbar}</div></div>`;
 }
-function vReveal(){
- const R=S.result;const q=R.q;
- if(!UI.revealDone[R.key]){
-  setTimeout(()=>{if(!UI.revealDone[R.key]){UI.revealDone[R.key]=true;UI.boom=R.key;render()}},2450);
-  return `<div class="count"><div><b>3</b><b>2</b><b>1</b></div></div>`;
- }
- const max=R.top.length?R.top[0].pts:1;
+/* بطاقة نتيجة سؤال: بتنستعمل بعد كل سؤال وبحفلة الألقاب */
+function resultHTML(R){
+ const q=R.q;const max=R.top.length?R.top[0].pts:1;
  const ws=R.winners.map(byId).filter(Boolean);
  const meWin=R.winners.includes(ME);
  const sz=ws.length>2?76:ws.length===2?96:120;
@@ -738,33 +879,54 @@ function vReveal(){
   <div class="lead">مين أكتر حدا ${esc(q.t)}؟</div>
   <div class="avs">${ws.map((p,i)=>`<div class="avw" style="animation-delay:${.2+i*.15}s">${i===0?`<span class="crownbig">${ic('crown')}</span>`:''}${avatarHTML(p,sz)}</div>`).join('')}</div>
   <div class="nm">${ws.map(p=>esc(p.name)).join(' و ')}</div>
-  <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:6px">${ws.length>1?'<span class="tag">تعادل</span>':''}${meWin?'<span class="tag sun">طلعت إنت! اعتبرها شهادة</span>':''}</div>
+  <div class="nicks">${ws.map(p=>`<span class="nk">${esc(nick(q,p.pid))}</span>`).join('')}</div>
+  <div style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:8px">${ws.length>1?'<span class="tag">تعادل</span>':''}${meWin?`<span class="tag sun">${meF()?'طلعتي إنتِ! اعتبريها شهادة':'طلعت إنت! اعتبرها شهادة'}</span>`:''}</div>
  </div>`:`<div class="winner c-plum"><h2 style="font-size:28px">ما حدا صوّت عهالسؤال</h2><p style="margin:6px 0 0;opacity:.85">منكمّل عالجاي</p></div>`;
  const rows=R.top.slice(0,8).map((t,i)=>{const p=byId(t.pid)||{name:'؟'};
   return `<div class="brow c-${colOf(t.pid)}" style="animation-delay:${.35+i*.08}s">${avatarHTML(p,44)}<div style="min-width:0"><div class="bn">${esc(p.name)}</div><div class="bar"><i style="width:${t.pts/max*100}%;animation-delay:${.5+i*.08}s"></i></div></div><div class="bp">${t.pct}%</div></div>`}).join('');
- let dock;
- if(ROLE==='host'){
-  const left=S.left;
-  dock=UI.customOpen?`<div class="custom"><label class="prefix"><span>مين أكتر حدا</span><input id="customIn" data-in="customText" maxlength="60" placeholder="اكتب السؤال…" value="${esc(UI.customText)}"></label><div class="row"><button class="btn rose" data-a="hCustom">اطرح السؤال</button><button class="btn ghost" data-a="customToggle" style="flex:.55">إلغاء</button></div></div>`
-  :`<div class="hostbar"><button class="btn" data-a="hNext" ${left>0?'':'disabled'}>${left>0?'السؤال الجاي':'خلصت الأسئلة'}</button>
+ return `<div style="margin-top:22px">${win}</div>
+ ${R.top.length?`<div class="card" style="margin-top:18px"><div class="small muted" style="margin-bottom:14px;font-weight:500">النتيجة · ${R.voters} صوّتوا</div><div class="board">${rows}</div></div>`:''}`;
+}
+function countdown(key,boom){
+ if(UI.revealDone[key])return null;
+ setTimeout(()=>{if(!UI.revealDone[key]){UI.revealDone[key]=true;if(boom)UI.boom=true;render()}},2450);
+ return `<div class="count"><div><b>3</b><b>2</b><b>1</b></div></div>`;
+}
+function hostRevealDock(){
+ const left=S.left;
+ return UI.customOpen?customBox('اطرح السؤال','hCustomNow'):`<div class="hostbar"><button class="btn" data-a="hNext" ${left>0?'':'disabled'}>${left>0?'السؤال الجاي':'خلصت الأسئلة'}</button>
    <button class="btn ghost mini" data-a="customToggle">${ic('pen')} سؤالك</button>
    <button class="btn ghost mini" data-a="hWrap">${ic('flag')} خلّصنا</button></div>`;
- }else dock=`<div class="waitpill"><span class="dots"><span></span><span></span><span></span></span> المدير عم يحضّر الجاي</div>`;
+}
+const waitPill=t=>`<div class="waitpill"><span class="dots"><span></span><span></span><span></span></span> ${t}</div>`;
+function vReveal(){
+ const R=S.result;
+ if(!R)return vBetween();
+ const cd=countdown(R.key,R.winners.length);if(cd)return cd;
  return `<div class="screen ${keyEnter('rv'+R.key)}">${topBar()}
  ${progHTML(S.asked)}
- <div style="margin-top:22px">${win}</div>
- ${R.top.length?`<div class="card" style="margin-top:18px"><div class="small muted" style="margin-bottom:14px;font-weight:500">النتيجة · ${R.voters} صوّتوا</div><div class="board">${rows}</div></div>`:''}
+ ${resultHTML(R)}
  ${SIG}</div>
- <div class="dock"><div class="dock-in">${dock}</div></div>`;
+ <div class="dock"><div class="dock-in">${ROLE==='host'?hostRevealDock():waitPill('الريس عم يحضّر الجاي')}</div></div>`;
+}
+function vBetween(){
+ return `<div class="screen ${keyEnter('between')}">${topBar()}
+ <div class="wait" style="min-height:56dvh"><div>
+  <div class="secret">${ic('lock')}</div>
+  <h2 style="font-size:30px;margin-top:16px">النتيجة محفوظة للآخر</h2>
+  <p class="muted" style="margin:6px 0 0">${S.asked} سؤال لهلأ. كل شي بينكشف بآخر السهرة.</p>
+ </div></div>
+ ${SIG}</div>
+ <div class="dock"><div class="dock-in">${ROLE==='host'?hostRevealDock():waitPill('الريس عم يحضّر الجاي')}</div></div>`;
 }
 function groupLabel(f){const t=f&&f.type||'شلة';const n=f&&f.name||'';if(n)return t+' '+n;return({'شلة':'الشلة','عيلة':'العيلة','رفقة':'الرفقة'})[t]||t}
 function vWrap(){
- if(ROLE!=='host')return `<div class="screen">${topBar()}<div class="wait"><div><div class="dots"><span></span><span></span><span></span></div><h2 style="font-size:30px;margin-top:20px">المدير عم يجهّز النتيجة النهائية</h2><p class="muted">ضبّوا حالكن للصورة الجماعية</p></div></div>${SIG}</div>`;
- const w=UI.wrap;
- return `<div class="screen ${keyEnter('wrap')}">${topBar('إنت المدير')}
- <div><button class="tag" data-a="hUnwrap">${ic('back')} رجوع للعبة</button></div>
- <h2 class="ptitle">خلصت السهرة؟</h2>
- <p class="muted small" style="margin:0">قبل ما نكشف النتيجة النهائية، عرّفنا على القعدة.</p>
+ if(ROLE!=='host')return `<div class="screen">${topBar()}<div class="wait"><div><div class="dots"><span></span><span></span><span></span></div><h2 style="font-size:30px;margin-top:20px">الريس عم يجهّز النتيجة النهائية</h2><p class="muted">ضبّوا حالكن للصورة الجماعية</p></div></div>${SIG}</div>`;
+ const w=UI.wrap;const fromFinal=H&&H.prev==='final';const n=H?H.history.length:0;
+ return `<div class="screen ${keyEnter('wrap')}">${topBar('إنت الريس')}
+ <div><button class="tag" data-a="hUnwrap">${ic('back')} ${fromFinal?'رجوع للنتيجة':'رجوع للعبة'}</button></div>
+ <h2 class="ptitle">${fromFinal?'عدّل على القعدة':'خلصت السهرة؟'}</h2>
+ <p class="muted small" style="margin:0">${fromFinal?'غيّر اللي بدك ياه وارجع للنتيجة.':`${n} ${n===1?'سؤال انحفظ':'أسئلة انحفظت'}. قبل الكشف، عرّفنا على القعدة.`}</p>
  <div><span class="label">مين نحنا؟</span>
  <div class="chips">${GROUP_TYPES.map(t=>`<button class="${w.type===t?'on':''}" data-a="gType" data-v="${t}">${t}</button>`).join('')}</div>
  <span class="label">شو اسمها؟ (اختياري)</span>
@@ -775,40 +937,113 @@ function vWrap(){
  <input type="file" id="fileGroup" accept="image/*" hidden data-file="group">
  ${w.photo?`<div style="text-align:center;margin-top:12px"><button class="tag" data-a="rmGroup">شيل الصورة</button></div>`:''}</div>
  ${SIG}</div>
- <div class="dock"><div class="dock-in"><button class="btn rose" data-a="hFinal">${ic('crown')} اكشف النتيجة النهائية</button></div></div>`;
+ <div class="dock"><div class="dock-in">${fromFinal?`<button class="btn rose" data-a="hFinal" data-v="all">${ic('check')} احفظ وارجع للنتيجة</button>`
+  :n?`<button class="btn rose" data-a="hFinal" data-v="cer">${ic('crown')} حفلة توزيع الألقاب</button><button class="btn ghost" data-a="hFinal" data-v="all">${ic('eye')} اكشف كل النتائج دفعة وحدة</button>`
+  :`<button class="btn rose" data-a="hFinal" data-v="all">${ic('crown')} اكشف النتيجة النهائية</button>`}</div></div>`;
 }
+/* ===== النتيجة النهائية ===== */
+const ZERO={m:['نفد بريشو','مخبّي ألقابو للسهرة الجاية','القعدة ما كشفتو لسّا','ما حدا قدر يمسك عليه شي'],
+ f:['نفدت بريشها','مخبّية ألقابها للسهرة الجاية','القعدة ما كشفتها لسّا','ما حدا قدر يمسك عليها شي']};
 function finalData(){
- const hist=S.history||[];const wins={};
- const rows=hist.map(r=>{r.winners.forEach(pid=>wins[pid]=(wins[pid]||0)+1);return{pred:r.q.t,pids:r.winners,names:r.winners.map(nameOf).join(' و ')}});
- const mx=Math.max(0,...Object.values(wins));
- const stars=mx?Object.keys(wins).filter(k=>wins[k]===mx):[];
- return{rows,wins,stars,mx,label:groupLabel(S.final),photo:S.final&&S.final.photo};
+ const hist=S.history||[];const hide=(S.final&&S.final.hide)||{};
+ const per={};ROSTER.forEach(p=>per[p.pid]={pid:p.pid,titles:[],pts:0});
+ hist.forEach(r=>{r.top.forEach(t=>{if(per[t.pid])per[t.pid].pts+=t.pts});r.winners.forEach(pid=>{if(per[pid])per[pid].titles.push({key:r.key,q:r.q,nick:nick(r.q,pid),full:r.q.t})})});
+ const people=Object.values(per).sort((a,b)=>b.titles.length-a.titles.length||b.pts-a.pts);
+ const r0=seeded((S.code||'')+hist.length);let zi=Math.floor(r0()*4);
+ people.forEach(p=>{p.shown=p.titles.filter(t=>!(hide[p.pid]||[]).includes(t.key));if(!p.titles.length||!p.shown.length){p.zero=ZERO[isF(p.pid)?'f':'m'][zi%4];zi++}});
+ const top=people[0];
+ const stars=top&&top.titles.length?people.filter(p=>p.titles.length===top.titles.length&&p.pts===top.pts).map(p=>p.pid):[];
+ return{hist,people,stars,mx:top?top.titles.length:0,label:groupLabel(S.final),photo:S.final&&S.final.photo,hide};
 }
 const lqab=n=>n===1?'لقب واحد':n===2?'لقبين':n+' ألقاب';
+function vCer(){
+ const hist=S.history||[];const i=S.cer||0;const n=hist.length;
+ if(i<n){
+  const R=hist[i];const cd=countdown('cer'+i,R.winners.length);if(cd)return cd;
+  return `<div class="screen ${keyEnter('cer'+i)}">${topBar('حفلة توزيع الألقاب')}
+  ${progHTML(i+1,n+1,'لقب ')}
+  ${resultHTML(R)}
+  ${SIG}</div>
+  <div class="dock"><div class="dock-in">${ROLE==='host'?`<button class="btn rose" data-a="cerNext">${i+1<n?'اللقب الجاي':`${ic('crown')} ومين نجم السهرة؟`}</button>`:waitPill('الريس عم يفتح الظرف الجاي')}</div></div>`;
+ }
+ const cd=countdown('cerstar',true);if(cd)return cd;
+ const D=finalData();const ss=D.stars.map(byId).filter(Boolean);
+ return `<div class="screen ${keyEnter('cerstar')}">${topBar('حفلة توزيع الألقاب')}
+ ${progHTML(n+1,n+1,'لقب ')}
+ <div style="margin-top:22px"><div class="winner c-plum"><div class="rays"></div>
+  <div class="lead">والختام… نجم السهرة</div>
+  <div class="avs">${ss.map((p,k)=>`<div class="avw">${k===0?`<span class="crownbig">${ic('crown')}</span>`:''}${avatarHTML(p,ss.length>1?96:128)}</div>`).join('')}</div>
+  <div class="nm">${ss.map(p=>esc(p.name)).join(' و ')||'ما في نجم الليلة'}</div>
+  ${ss.length?`<div class="nicks"><span class="nk">${lqab(D.mx)}</span></div>`:''}
+ </div></div>
+ ${SIG}</div>
+ <div class="dock"><div class="dock-in">${ROLE==='host'?`<button class="btn" data-a="cerNext">${ic('eye')} النتيجة النهائية</button>`:waitPill('الريس رح يفتح النتيجة النهائية')}</div></div>`;
+}
+function chipsHTML(p,editable){
+ if(editable)return p.titles.map(t=>{const off=(UI_HIDE(p.pid)).includes(t.key);return `<button class="tchip ${off?'off':''}" data-a="hideT" data-v="${p.pid}|${t.key}" title="${esc('مين أكتر حدا '+t.full+'؟')}">${off?'':ic('check')}${esc(t.nick)}</button>`}).join('');
+ return p.titles.length?p.titles.map(t=>`<span class="tchip" title="${esc('مين أكتر حدا '+t.full+'؟')}">${esc(t.nick)}</span>`).join(''):`<span class="zero">${esc(p.zero)}</span>`;
+}
+const UI_HIDE=pid=>((S.final&&S.final.hide)||{})[pid]||[];
 function vFinal(){
  const D=finalData();
  if(!UI.imgTheme)UI.imgTheme=themeNow();
- const mineT=D.rows.filter(r=>r.pids.includes(ME));
+ const host=ROLE==='host';
+ const me=D.people.find(p=>p.pid===ME);
  const lay=[['cover','غلاف'],['polaroid','بولاريد'],['card','كرت']];
- const list=D.rows.map(r=>{const p=byId(r.pids[0]);return `<div class="lrow">${avatarHTML(p,42)}<div style="min-width:0"><div class="p">أكتر حدا ${esc(r.pred)}</div><div class="w">${esc(r.names)}</div></div></div>`}).join('');
+ const tab=UI.ftab||'people';
+ const peopleList=D.people.map((p,i)=>{const pp=byId(p.pid);return `<div class="prow">
+  <div class="prk">${p.titles.length?i+1:'·'}</div>${avatarHTML(pp,48)}
+  <div style="min-width:0;flex:1"><div class="pn">${esc(pp?pp.name:'؟')}${youTag(p.pid)} ${p.titles.length?`<span class="pc">${lqab(p.titles.length)}</span>`:''}</div>
+  <div class="tchips">${chipsHTML({...p,zero:p.titles.length?p.zero:p.zero},false)}</div></div></div>`}).join('');
+ const qList=D.hist.map((r,i)=>{const open=UI.qopen===r.key;const ws=r.winners.map(nameOf).join(' و ');const max=r.top.length?r.top[0].pts:1;
+  return `<div class="qrow ${open?'open':''}"><button class="qhead" data-a="qopen" data-v="${r.key}" aria-expanded="${open}">
+   <span class="qi2 c-${qcolOf(r.key)}">${ic(r.q.i)}</span>
+   <span style="min-width:0;flex:1;text-align:start"><span class="qt">مين أكتر حدا ${esc(r.q.t)}؟</span><span class="qw">${esc(ws)}${r.revealed?'':' · <em>انكشف بالآخر</em>'}</span></span>
+   <span class="chev">${ic('back')}</span></button>
+   ${open?`<div class="qbody"><div class="small muted" style="margin-bottom:12px">${r.voters} صوّتوا</div><div class="board">${r.top.slice(0,8).map(t=>{const p=byId(t.pid)||{name:'؟'};return `<div class="brow c-${colOf(t.pid)}">${avatarHTML(p,36)}<div style="min-width:0"><div class="bn">${esc(p.name)}</div><div class="bar"><i style="width:${t.pts/max*100}%"></i></div></div><div class="bp">${t.pct}%</div></div>`}).join('')}</div></div>`:''}
+  </div>`}).join('');
+ const curate=host?`<div class="card curate"><div class="ch"><h3>شو بيطلع بالصورة؟</h3><span class="small muted">اكبس عاللقب لتشيلو أو ترجّعو</span></div>
+  ${D.people.filter(p=>p.titles.length).map(p=>{const pp=byId(p.pid);return `<div class="crow">${avatarHTML(pp,34)}<div style="min-width:0;flex:1"><div class="pn sm">${esc(pp?pp.name:'؟')}</div><div class="tchips">${chipsHTML(p,true)}</div></div></div>`}).join('')||'<div class="hint2">ما في ألقاب لهلأ.</div>'}
+  <div class="hint2" style="margin-top:8px">بيطلع لحد 3 ألقاب جنب كل واحد، والباقي بيصير «+».</div></div>`:'';
  return `<div class="screen ${keyEnter('final')}">${topBar()}
+ ${host?`<div><button class="tag" data-a="hBack">${ic('back')} رجوع لتعديل القعدة</button></div>`:''}
  <div class="fhead"><div class="k">أكتر حدا من</div><h1><span>${esc(D.label)}</span></h1></div>
  ${D.stars.length?`<div class="star">${avatarHTML(byId(D.stars[0]),62)}<div style="min-width:0"><div class="t">نجم السهرة</div><div class="n">${D.stars.map(n=>esc(nameOf(n))).join(' و ')}</div><div class="t">${lqab(D.mx)}</div></div><div class="medal">${D.mx}</div></div>`:''}
- ${mineT.length?`<div class="card mine"><div style="font-family:var(--fd);font-size:22px">ألقابك الليلة</div><div class="stick">${mineT.map(r=>`<span>أكتر حدا ${esc(r.pred)}</span>`).join('')}</div></div>`:''}
- <div style="margin-top:24px;display:grid;gap:8px">
+ ${me&&me.titles.length?`<div class="card mine"><div style="font-family:var(--fd);font-size:22px">ألقابك الليلة</div><div class="stick">${me.titles.map(t=>`<span>${esc(t.nick)}</span>`).join('')}</div></div>`:''}
+ <div class="seg" style="margin-top:22px">
+  <button class="${tab==='people'?'on':''}" data-a="ftab" data-v="people">${ic('group')} الألقاب</button>
+  <button class="${tab==='qs'?'on':''}" data-a="ftab" data-v="qs">${ic('nag')} كل الأسئلة (${D.hist.length})</button>
+ </div>
+ <div class="card" style="margin-top:12px">${tab==='people'?peopleList:(qList||'<div class="hint2">ما انحفظ ولا سؤال.</div>')}</div>
+ <div class="sech"><h3>صورة الستوري</h3></div>
+ <div style="display:grid;gap:8px">
   <div class="seg">${lay.map(([k,n])=>`<button class="${UI.layout===k?'on':''}" data-a="layout" data-v="${k}">${n}</button>`).join('')}</div>
   <div class="seg">${[['light','فاتح'],['dark','داكن']].map(([k,n])=>`<button class="${UI.imgTheme===k?'on':''}" data-a="imgTheme" data-v="${k}">${n}</button>`).join('')}</div>
  </div>
  <div class="story" id="story"><div class="dots"><span></span><span></span><span></span></div></div>
  <div class="row"><button class="btn" data-a="download">${ic('down')} حمّل الصورة</button><button class="btn deep" data-a="shareInsta">${ic('share')} شارك مع صحابك</button></div>
- ${D.rows.length?`<div class="card" style="margin-top:20px"><div class="small muted" style="margin-bottom:4px;font-weight:500">كل الألقاب</div>${list}</div>`:''}
- ${ROLE==='host'?`<div style="margin-top:18px"><button class="btn ghost" data-a="newGame">قعدة جديدة</button></div>`:''}
+ ${curate}
+ ${host?`<div style="margin-top:18px"><button class="btn ghost" data-a="newGame">قعدة جديدة</button></div>`:''}
+ ${installCard()}
  <div class="sig">@eyad.hloubi · صار بدها قعدة.</div></div>`;
+}
+/* ===== تنزيل كتطبيق ===== */
+let DEFER=null;
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();DEFER=e;if(S&&S.phase==='final'){lastHTML='';render()}});
+addEventListener('appinstalled',()=>{DEFER=null;UI.installed=true;lastHTML='';render()});
+const STANDALONE=()=>{try{return matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}catch(e){return false}};
+const IOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+function installCard(){
+ if(STANDALONE()||UI.installed||DEMO&&window.top!==window.self)return '';
+ const how=DEFER?`<button class="btn sea" data-a="install">${ic('down')} نزّل التطبيق</button>`
+  :IOS?`<div class="steps"><span>1</span> اكبس زر المشاركة ${ic('share')} تحت بسفاري<br><span>2</span> اختار «إضافة إلى الشاشة الرئيسية»</div>`
+  :`<div class="steps"><span>1</span> افتح قائمة المتصفح (⋮)<br><span>2</span> اختار «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية»</div>`;
+ return `<div class="install"><div class="iic"><img src="icon-192.png" alt=""></div><div style="min-width:0;flex:1"><div class="it">خلّي اللعبة عموبايلك</div><div class="small muted">بتفتحها متل أي تطبيق بالسهرة الجاية</div></div></div>${how?`<div class="install2">${how}</div>`:''}`;
 }
 function vConnecting(){
  const nh=UI.conn==='nohost',full=UI.conn==='full';
  const t=full?'القعدة مليانة':nh?'ما لقينا القعدة لهلأ':'عم نفوت عالقعدة…';
- const d=full?'وصلنا للحد الأقصى من اللاعبين بهالقعدة':nh?`تأكد من الكود <b style="direction:ltr;display:inline-block">${esc(CODE||'')}</b>، أو استنى المدير يفتح الصفحة`:'تأكد إنك والمدير عالإنترنت';
+ const d=full?'وصلنا للحد الأقصى من اللاعبين بهالقعدة':nh?`تأكد من الكود <b style="direction:ltr;display:inline-block">${esc(CODE||'')}</b>، أو استنى الريس يفتح الصفحة`:'تأكد إنك والريس عالإنترنت';
  return `<div class="screen">${topBar()}<div class="wait"><div><div class="dots"><span></span><span></span><span></span></div><h2 style="font-size:28px;margin-top:20px">${t}</h2><p class="muted small" style="line-height:1.9">${d}</p>${nh||full?`<div style="margin-top:18px"><button class="btn ghost" data-a="newGame">رجوع للبداية</button></div>`:''}</div></div></div>`}
 
 /* ================= كونفيتي ================= */
@@ -832,12 +1067,13 @@ function render(){
  if(UI.screen==='cover')html=vCover();
  else if(UI.screen==='code')html=vCode();
  else if(UI.screen==='profile')html=vProfile();
- else if(!S||!byId(ME)&&ROLE==='player'&&S.phase!=='final')html=vConnecting();
+ else if(!S||!byId(ME)&&ROLE==='player'&&S.phase!=='final'&&S.phase!=='cer')html=vConnecting();
  else switch(S.phase){
   case 'lobby':html=vLobby();break;
   case 'q':html=vQuestion();break;
-  case 'reveal':html=S.result?vReveal():vLobby();break;
+  case 'reveal':html=vReveal();break;
   case 'wrap':html=vWrap();break;
+  case 'cer':html=vCer();break;
   case 'final':html=vFinal();break;
   default:html=vConnecting();
  }
@@ -849,7 +1085,7 @@ function render(){
  if(fid){const n=document.getElementById(fid);if(n){n.focus();if(sel)try{n.setSelectionRange(sel[0],sel[1])}catch(e){}}}
  const q=$('#qr');if(q)drawQR(q);
  if($('#story'))showStory();
- if(UI.boom){const k=UI.boom;UI.boom=null;if(S&&S.result&&S.result.key===k&&S.result.winners.length)setTimeout(confetti,350)}
+ if(UI.boom){UI.boom=null;setTimeout(confetti,350)}
 }
 function drawQR(el){
  try{const qr=qrcode(0,'M');qr.addData(joinUrl());qr.make();el.innerHTML=qr.createSvgTag({cellSize:6,margin:2,scalable:true})}catch(e){el.textContent=CODE}
@@ -860,14 +1096,14 @@ const ACT={
  theme(){applyTheme(themeNow()==='dark'?'light':'dark');lastHTML='';render()},
  toCover(){UI.screen='cover';render()},
  codeScreen(){UI.screen='code';render();setTimeout(()=>$('#codeIn')&&$('#codeIn').focus(),50)},
- codeGo(){const c=UI.codeInput.toUpperCase().replace(/[^A-Z0-9]/g,'');if(c.length!==5){toast('الكود 5 أحرف');return}CODE=c;UI.asHost=false;UI.profile={name:'',photo:null};UI.screen='profile';render()},
- hostProfile(){UI.asHost=true;UI.profile={name:'',photo:null};UI.screen='profile';render()},
- goProfile(){UI.asHost=false;UI.profile={name:'',photo:null};UI.screen='profile';render()},
+ codeGo(){const c=UI.codeInput.toUpperCase().replace(/[^A-Z0-9]/g,'');if(c.length!==5){toast('الكود 5 أحرف');return}CODE=c;UI.asHost=false;UI.profile={name:'',photo:null,g:null};UI.screen='profile';render()},
+ hostProfile(){UI.asHost=true;UI.profile={name:'',photo:null,g:null};UI.screen='profile';render()},
+ goProfile(){UI.asHost=false;UI.profile={name:'',photo:null,g:null};UI.screen='profile';render()},
  newGame(){if(H)store.del('qa3da-host-'+H.code);location.href=location.pathname+(LOCAL?'?local=1':'')},
  rmAva(){UI.profile.photo=null;render()},
- doHost(){startHost()},
- demoProfile(){DEMO=true;UI.asHost=true;UI.profile={name:'',photo:null};UI.screen='profile';render()},
- doJoin(){joinAsPlayer()},
+ doHost(){if(!UI.profile.g){toast('اختار شب أو صبية');return}startHost()},
+ demoProfile(){DEMO=true;UI.asHost=true;UI.profile={name:'',photo:null,g:null};UI.screen='profile';render()},
+ doJoin(){if(!UI.profile.g){toast('اختار شب أو صبية');return}joinAsPlayer()},
  copyLink(){const u=joinUrl();(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>toast('انتسخ الرابط'),()=>prompt('رابط القعدة',u))},
  hStart(){HOST.start()},
  rank(pid){if(S.voted.includes(ME))return;try{navigator.vibrate&&navigator.vibrate(12)}catch(e){}const i=UI.ranks.indexOf(pid);if(i>=0)UI.ranks.splice(i,1);else if(UI.ranks.length<3)UI.ranks.push(pid);else{UI.ranks[2]=pid}render()},
@@ -875,15 +1111,26 @@ const ACT={
  vote(){if(!UI.ranks.length)return;send({t:'vote',pid:ME,key:S.q.key,ranks:UI.ranks.slice()})},
  unvote(){send({t:'unvote',pid:ME,key:S.q.key})},
  hReveal(){HOST.reveal()},
- hSkip(){HOST.skip()},
  hNext(){UI.customOpen=false;HOST.next()},
+ hSilent(){UI.customOpen=false;HOST.silentNext()},
+ hPass(){UI.customOpen=false;HOST.pass();toast('السؤال انمرّر وما رح يطلع أبداً')},
+ hCustomNow(){const t=UI.customText.trim();if(!t){toast('اكتب السؤال أول');return}UI.customOpen=false;UI.customText='';HOST.custom(t,true)},
+ addExtra(){const t=UI.customText.trim();if(!t){toast('اكتب السؤال أول');return}if(HOST.addExtra(t)){UI.customText='';lastHTML='';render();setTimeout(()=>$('#extraIn')&&$('#extraIn').focus(),30)}else toast('وصلنا للحد الأقصى')},
+ rmExtra(i){HOST.rmExtra(i)},
+ pickG(g){UI.profile.g=g;render()},
+ cerNext(){HOST.cerNext()},
+ hBack(){HOST.back()},
+ hideT(v){const[pid,key]=String(v).split('|');HOST.toggleHide(pid,key)},
+ ftab(t){UI.ftab=t;render()},
+ qopen(k){UI.qopen=UI.qopen===k?null:k;render()},
+ async install(){if(!DEFER)return;DEFER.prompt();try{const r=await DEFER.userChoice;if(r&&r.outcome==='accepted')UI.installed=true}catch(e){}DEFER=null;lastHTML='';render()},
  hWrap(){HOST.wrap()},
  hUnwrap(){HOST.unwrap()},
  customToggle(){UI.customOpen=!UI.customOpen;render();if(UI.customOpen)setTimeout(()=>$('#customIn')&&$('#customIn').focus(),50)},
- hCustom(){const t=UI.customText.trim();if(!t){toast('اكتب السؤال أول');return}UI.customOpen=false;UI.customText='';HOST.custom(t)},
+ hCustom(){const t=UI.customText.trim();if(!t){toast('اكتب السؤال أول');return}UI.customOpen=false;UI.customText='';if(HOST.custom(t,false))toast('رح يطلع السؤال الجاي')},
  gType(t){UI.wrap.type=t;render()},
  rmGroup(){UI.wrap.photo=null;render()},
- hFinal(){HOST.finalize()},
+ hFinal(v){HOST.finalize(v)},
  layout(k){UI.layout=k;render()},
  imgTheme(k){UI.imgTheme=k;render()},
  download(){downloadStory()},
@@ -892,7 +1139,7 @@ const ACT={
 app.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el||el.disabled)return;const f=ACT[el.dataset.a];if(f)f(el.dataset.v,el)});
 app.addEventListener('input',e=>{const el=e.target;const k=el.dataset.in;if(!k)return;
  if(k==='name')UI.profile.name=el.value;else if(k==='codeInput')UI.codeInput=el.value;else if(k==='customText')UI.customText=el.value;else if(k==='gname'){UI.wrap.name=el.value;const t=document.getElementById('gPreview');if(t)t.textContent='رح تطلع: «أكتر حدا من '+groupLabel({type:UI.wrap.type,name:cleanName(el.value)})+'»'}});
-app.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const id=e.target.id;if(id==='codeIn')ACT.codeGo();else if(id==='nameIn')(UI.asHost?ACT.doHost:ACT.doJoin)();else if(id==='customIn')ACT.hCustom()});
+app.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const id=e.target.id;if(id==='codeIn')ACT.codeGo();else if(id==='nameIn')(UI.asHost?ACT.doHost:ACT.doJoin)();else if(id==='customIn')(S&&S.phase==='q'?ACT.hCustom:ACT.hCustomNow)();else if(id==='extraIn')ACT.addExtra()});
 app.addEventListener('change',async e=>{const el=e.target;const k=el.dataset.file;if(!k||!el.files||!el.files[0])return;const file=el.files[0];el.value='';
  if(k==='ava'){const d=await cropImage(file,{aspect:1,outW:256,round:true,title:'حرّك وكبّر صورتك'});if(d){UI.profile.photo=d;render()}}
  else if(k==='group'){const d=await cropImage(file,{aspect:4/5,outW:800,title:'ضبّط الصورة الجماعية'});if(d){UI.wrap.photo=d;render()}}
@@ -961,14 +1208,14 @@ function confettiBg(ctx,P,seed,area){
   const k=r();if(k<.35){ctx.beginPath();ctx.arc(0,0,5+r()*5,0,7);ctx.fill()}else if(k<.75)ctx.fillRect(-9,-4,18,8);else{ctx.beginPath();ctx.moveTo(0,-9);ctx.lineTo(9,7);ctx.lineTo(-9,7);ctx.closePath();ctx.fill()}ctx.restore()}
  ctx.globalAlpha=1;
 }
-function groupArt(ctx,x,y,w,h,P,D,imgs){
+function groupArt(ctx,x,y,w,h,P,D,imgs,padB=0){
  ctx.save();ctx.beginPath();ctx.rect(x,y,w,h);ctx.clip();
  if(D.photoImg){cover(ctx,D.photoImg,x,y,w,h);ctx.restore();return}
  ctx.fillStyle=P.c.plum;ctx.fillRect(x,y,w,h);
  const g=ctx.createRadialGradient(x+w*.8,y+h*.2,10,x+w*.8,y+h*.2,w);g.addColorStop(0,'rgba(255,255,255,.18)');g.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=g;ctx.fillRect(x,y,w,h);
  const ppl=ROSTER.slice(0,12);const n=ppl.length||1;const cols=n<=4?n:n<=9?3:4;const rows=Math.ceil(n/cols);
- const cell=Math.min(w/(cols+.5),h/(rows+.5));const r=cell*.36;
- const ox=x+(w-cols*cell)/2,oy=y+(h-rows*cell)/2;
+ const ah=h-padB;const cell=Math.min(w/(cols+.5),ah/(rows+.5));const r=cell*.36;
+ const ox=x+(w-cols*cell)/2,oy=y+(ah-rows*cell)/2;
  ppl.forEach((p,i)=>{const c=i%cols,rw=Math.floor(i/cols);const cx=ox+(cols-c-.5)*cell,cy=oy+(rw+.5)*cell;
   ctx.save();ctx.translate(cx,cy);ctx.rotate(((i%3)-1)*.08);avatarC(ctx,imgs[p.pid],p.name,0,0,r,P,P.c[colOf(p.pid)]);ctx.restore()});
  ctx.restore();
@@ -983,19 +1230,44 @@ function titleBlock(ctx,P,D,x2,y,maxW,align,onPhoto){
  ctx.fillStyle=onPhoto?'#FFFFFF':P.ink;ctx.font=`400 ${fs}px ${FD}`;ctx.fillText(D.label,x2,y+fs*1.08);
  return y+fs*1.08;
 }
-function drawRows(ctx,P,rows,x,y,w,h,imgs,forceCols){
- const all=rows.slice(0,24);const n=all.length;if(!n){ctx.fillStyle=P.ink2;ctx.font=`500 34px ${FB}`;ctx.textAlign='center';ctx.fillText('ما في ألقاب هالمرة',x+w/2,y+h/2);return}
- const cols=forceCols||(n>9?2:1);const per=Math.ceil(n/cols);const gap=cols>1?34:0;const cw=(w-gap*(cols-1))/cols;
- const rh=Math.min(126,h/per);const k=Math.min(1.08,rh/114);
- ctx.direction='rtl';ctx.textAlign='right';ctx.textBaseline='alphabetic';
- all.forEach((r,i)=>{const col=Math.floor(i/per),row=i%per;const cx=x+w-(col+1)*cw-col*gap,cy=y+row*rh;
-  const ar=Math.round(30*k);const mid=cy+rh/2;const pc=pcol(P,r.pids[0]);
-  avatarC(ctx,imgs[r.pids[0]],r.names,cx+cw-ar-6,mid,ar,P,pc);
-  const tx=cx+cw-ar*2-26*k,tw=cw-ar*2-30*k;
-  ctx.fillStyle=P.ink2;ctx.font=`500 ${Math.round(23*k)}px ${FB}`;ctx.fillText(fit(ctx,'أكتر حدا '+r.pred,tw),tx,mid-12*k);
-  ctx.fillStyle=P.ink;ctx.font=`400 ${Math.round(36*k)}px ${FD}`;ctx.fillText(fit(ctx,r.names,tw),tx,mid+36*k);
-  if(row<per-1&&i<n-1){ctx.strokeStyle=P.line;ctx.lineWidth=2;ctx.setLineDash([8,8]);ctx.beginPath();ctx.moveTo(cx,cy+rh);ctx.lineTo(cx+cw,cy+rh);ctx.stroke();ctx.setLineDash([])}
+/* صفوف الأشخاص بالصورة: صورة واسم وجنبه ألقابه (لحد 3 و +N) */
+function drawPeople(ctx,P,D,x,y,w,h,imgs){
+ const list=D.people.slice(0,12);const more=D.people.length-list.length;
+ if(!list.length){ctx.fillStyle=P.ink2;ctx.font=`500 34px ${FB}`;ctx.textAlign='center';ctx.fillText('ما في ألقاب هالمرة',x+w/2,y+h/2);return}
+ const items=p=>{const vis=p.shown.slice(0,3).map(t=>({t:t.nick,c:pcol(P,p.pid)}));const extra=p.shown.length-vis.length;if(extra>0)vis.push({t:'+'+extra,plus:true});return vis};
+ function lay(k,cols){
+  const cw=(w-(cols-1)*36)/cols;const a=Math.round((cols>1?27:32)*k);const nameF=Math.round((cols>1?32:38)*k),chipF=Math.round((cols>1?20:23)*k),chipH=Math.round(chipF*1.85),gap=Math.round(8*k);
+  const tw=cw-a*2-22*k;
+  ctx.font=`600 ${chipF}px ${FB}`;
+  const rows=list.map(p=>{
+   const ch=p.zero&&!p.shown.length?null:items(p);let lines=[[]],lw=0;
+   if(ch)ch.forEach(c=>{let cwid=Math.min(tw,ctx.measureText(c.t).width+chipF*1.3);c.w=cwid;if(lw&&lw+cwid>tw){lines.push([]);lw=0}lines[lines.length-1].push(c);lw+=cwid+gap});
+   const nl=ch?lines.length:1;const rh=Math.max(a*2+18*k,nameF*1.25+8*k+nl*(chipH+gap))+16*k;
+   return{p,ch,lines,rh}});
+  const per=Math.ceil(rows.length/cols);const colsH=[];for(let c=0;c<cols;c++)colsH.push(rows.slice(c*per,(c+1)*per).reduce((s,r)=>s+r.rh,0));
+  return{k,cols,cw,a,nameF,chipF,chipH,gap,tw,rows,per,H:Math.max(...colsH)+(more>0?50:0)};
+ }
+ let L=null;
+ for(const [cols,k] of [[1,1.25],[1,1.15],[1,1.05],[1,1],[1,.92],[1,.86],[2,1.45],[2,1.35],[2,1.25],[2,1.15],[2,1.05],[2,.96],[2,.88],[2,.8],[2,.72],[2,.64],[2,.56]]){L=lay(k,cols);if(L.H<=h)break}
+ ctx.direction='rtl';ctx.textBaseline='alphabetic';
+ L.rows.forEach((r,i)=>{
+  const col=Math.floor(i/L.per),row=i%L.per;const cx=x+w-(col+1)*L.cw-col*36;
+  const cy=y+L.rows.slice(col*L.per,i).reduce((s,q)=>s+q.rh,0);
+  const pp=byId(r.p.pid)||{name:'؟'};const pc=pcol(P,r.p.pid);
+  avatarC(ctx,imgs[r.p.pid],pp.name,cx+L.cw-L.a-4,cy+L.a+10*L.k,L.a,P,pc);
+  const tx=cx+L.cw-L.a*2-22*L.k;
+  ctx.textAlign='right';ctx.fillStyle=P.ink;ctx.font=`400 ${L.nameF}px ${FD}`;
+  const ny=cy+L.nameF*1.05;ctx.fillText(fit(ctx,pp.name,L.tw),tx,ny);
+  let ly=ny+10*L.k;
+  if(!r.ch){ctx.fillStyle=P.ink2;ctx.font=`500 ${L.chipF}px ${FB}`;ctx.fillText(fit(ctx,r.p.zero,L.tw),tx,ly+L.chipH*.68)}
+  else r.lines.forEach(line=>{let lx=tx;line.forEach(c=>{
+   const bx=lx-c.w;ctx.save();rrect(ctx,bx,ly,c.w,L.chipH,L.chipH/2);
+   if(c.plus){ctx.fillStyle=P.bg2;ctx.fill()}else{ctx.globalAlpha=.2;ctx.fillStyle=c.c;ctx.fill();ctx.globalAlpha=1;ctx.lineWidth=2;ctx.strokeStyle=c.c;ctx.stroke()}
+   ctx.restore();ctx.fillStyle=c.plus?P.ink2:P.ink;ctx.font=`600 ${L.chipF}px ${FB}`;ctx.textAlign='center';
+   ctx.fillText(fit(ctx,c.t,c.w-L.chipF*.9),bx+c.w/2,ly+L.chipH*.68);ctx.textAlign='right';lx=bx-L.gap});ly+=L.chipH+L.gap});
+  if(row<L.per-1&&i<L.rows.length-1){ctx.strokeStyle=P.line;ctx.lineWidth=2;ctx.setLineDash([8,8]);ctx.beginPath();ctx.moveTo(cx,cy+r.rh-4);ctx.lineTo(cx+L.cw,cy+r.rh-4);ctx.stroke();ctx.setLineDash([])}
  });
+ if(more>0){ctx.fillStyle=P.ink2;ctx.font=`500 26px ${FB}`;ctx.textAlign='center';ctx.fillText(`و${more} كمان بالقعدة`,x+w/2,y+L.H-12)}
 }
 function starPill(ctx,P,D,cx,y,maxW){
  if(!D.stars.length)return false;
@@ -1023,14 +1295,14 @@ async function buildStory(layout,theme){
  ctx.fillStyle=P.bg;ctx.fillRect(0,0,SW,SH);
  const seed=(S.final&&S.final.name||'')+layout;
  if(layout==='cover'){
-  const H1=880;groupArt(ctx,0,0,SW,H1,P,D,imgs);
+  const H1=880;groupArt(ctx,0,0,SW,H1,P,D,imgs,260);
   const gr=ctx.createLinearGradient(0,H1-520,0,H1);gr.addColorStop(0,'rgba(15,11,30,0)');gr.addColorStop(1,'rgba(15,11,30,.82)');ctx.fillStyle=gr;ctx.fillRect(0,H1-520,SW,520);
   titleBlock(ctx,P,D,1000,H1-190,900,'right',true);
   // حافة متعرجة ملونة
   ctx.fillStyle=P.bg;ctx.beginPath();ctx.moveTo(0,H1);for(let i=0;i<=24;i++)ctx.lineTo(i*SW/24,H1-(i%2?22:0));ctx.lineTo(SW,SH);ctx.lineTo(0,SH);ctx.closePath();ctx.fill();
   confettiBg(ctx,P,seed,[40,H1+10,1000,80]);
   const has=starPill(ctx,P,D,SW/2,H1+40,900);
-  const top=H1+(has?150:70);drawRows(ctx,P,D.rows,80,top,920,1770-top,imgs);
+  const top=H1+(has?150:70);drawPeople(ctx,P,D,80,top,920,1760-top,imgs);
   footer(ctx,P,1790);
  }else if(layout==='polaroid'){
   confettiBg(ctx,P,seed,[20,20,1040,1060]);
@@ -1044,7 +1316,7 @@ async function buildStory(layout,theme){
   ctx.save();ctx.translate(SW/2+260,140);ctx.rotate(.45);ctx.globalAlpha=.85;ctx.fillStyle=P.c.rose;ctx.fillRect(-90,-24,180,48);ctx.restore();
   ctx.save();ctx.translate(SW/2-280,170);ctx.rotate(-.5);ctx.globalAlpha=.85;ctx.fillStyle=P.c.sea;ctx.fillRect(-80,-22,160,44);ctx.restore();ctx.globalAlpha=1;
   const has=starPill(ctx,P,D,SW/2,1075,900);
-  const top=has?1185:1100;drawRows(ctx,P,D.rows,80,top,920,1770-top,imgs);
+  const top=has?1185:1100;drawPeople(ctx,P,D,80,top,920,1760-top,imgs);
   footer(ctx,P,1790);
  }else{
   ctx.fillStyle=P.c.sea;ctx.fillRect(0,0,SW,SH);confettiBg(ctx,{...P,c:{a:'rgba(255,255,255,.35)',b:'rgba(255,255,255,.2)',c:P.c.sun,d:'rgba(255,255,255,.25)',e:P.c.rose}},seed,[0,0,SW,SH]);
@@ -1057,15 +1329,16 @@ async function buildStory(layout,theme){
   ctx.save();ctx.translate(SW/2,665);ctx.rotate(.012);rrect(ctx,-424,-300,848,600,34);ctx.fillStyle=P.press;ctx.save();ctx.translate(8,10);rrect(ctx,-424,-300,848,600,34);ctx.fill();ctx.restore();
   rrect(ctx,-424,-300,848,600,34);ctx.save();ctx.clip();groupArt(ctx,-424,-300,848,600,P,D,imgs);ctx.restore();rrect(ctx,-424,-300,848,600,34);ctx.strokeStyle=P.press;ctx.lineWidth=4;ctx.stroke();ctx.restore();
   const has=starPill(ctx,P,D,SW/2,1010,820);
-  const top=has?1115:1030;drawRows(ctx,P,D.rows,116,top,848,1665-top,imgs,D.rows.length>6?2:1);
+  const top=has?1115:1030;drawPeople(ctx,P,D,116,top,848,1660-top,imgs);
   footer(ctx,P,1690,116,964);
  }
  return c;
 }
+const storyKey=()=>UI.layout+'|'+UI.imgTheme+'|'+JSON.stringify(S.final&&{t:S.final.type,n:S.final.name,h:S.final.hide,p:(S.final.photo||'').length})+'|'+ROSTER.length;
 async function showStory(){
- const key=UI.layout+'|'+UI.imgTheme;
+ const key=storyKey();
  if(!UI.story[key]){const c=await buildStory(UI.layout,UI.imgTheme);UI.story[key]=c.toDataURL('image/png')}
- const now=$('#story');if(now&&UI.layout+'|'+UI.imgTheme===key)now.innerHTML=`<img src="${UI.story[key]}" alt="صورة النتيجة">`;
+ const now=$('#story');if(now&&storyKey()===key)now.innerHTML=`<img src="${UI.story[key]}" alt="صورة النتيجة">`;
 }
 async function downloadStory(){
  const c=await buildStory(UI.layout,UI.imgTheme);
@@ -1075,13 +1348,14 @@ async function downloadStory(){
 }
 
 /* ================= الإقلاع ================= */
+if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostname==='localhost')&&!LOCAL){addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
 (function boot(){
  const r=params.get('r');
  if(r){CODE=r.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,5);
   const hs=store.get('qa3da-host-'+CODE);
   if(hs&&params.has('h')){resumeHost(hs);return}
   const ps=store.get('qa3da-p-'+CODE);
-  if(ps&&ps.pid){ME=ps.pid;UI.profile={name:ps.name||'',photo:ps.photo||null};joinAsPlayer();return}
+  if(ps&&ps.pid){ME=ps.pid;UI.profile={name:ps.name||'',photo:ps.photo||null,g:ps.g||'m'};joinAsPlayer();return}
  }
  render();
 })();
