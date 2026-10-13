@@ -18,6 +18,8 @@ const MAX_ROOMS = 5000;
 const ROOM_IDLE_MS = 6 * 60 * 60 * 1000; // بتنمسح القعدة بعد 6 ساعات بلا حدا
 const CODE_RE = /^[A-Z0-9]{5}$/;
 const ID_RE = /^[a-z0-9]{6,24}$/;
+const HANDOVER_MS = Number(process.env.HANDOVER_MS) || 45000; // بعد قديش من غياب الريس بيقدر حدا تاني ياخد الريسة
+const MAX_SNAP = 2.5 * 1024 * 1024;
 
 const PUBLIC = path.join(__dirname, 'public');
 const fs = require('fs');
@@ -75,7 +77,8 @@ function getRoom(code, create) {
   let r = rooms.get(code);
   if (!r && create) {
     if (rooms.size >= MAX_ROOMS) return null;
-    r = { code, key: null, host: null, players: new Map(), touched: Date.now(), seen: new Set(), started: false, rounds: 0, finished: false, opened: false };
+    r = { code, key: null, host: null, players: new Map(), touched: Date.now(), seen: new Set(), started: false, rounds: 0, finished: false, opened: false,
+      snap: null, hostGoneAt: 0, offerTo: null, banned: new Set(), claimTimer: null };
     rooms.set(code, r);
   }
   return r;
@@ -115,7 +118,7 @@ function handle(ws, m) {
   const r = ws.room;
   if (r) r.touched = Date.now();
 
-  // المدير بيفتح القعدة أو بيرجع لها
+  // الريس بيفتح القعدة أو بيرجع لها
   if (m.t === 'host') {
     if (ws.role) return;
     if (typeof m.code !== 'string' || !CODE_RE.test(m.code) || typeof m.key !== 'string' || !ID_RE.test(m.key)) return ws.close(4400, 'bad');
@@ -125,9 +128,10 @@ function handle(ws, m) {
     room.key = m.key;
     if (room.host && room.host !== ws) { const old = room.host; room.host = null; try { old.close(4000, 'replaced'); } catch (e) {} }
     room.host = ws; ws.role = 'host'; ws.room = room; room.touched = Date.now();
+    room.offerTo = null; clearTimeout(room.claimTimer);
     if (!room.opened) { room.opened = true; stats.event('room'); }
     out(ws, { t: 'host-ok' });
-    // المدير بيعرف مين متصل هلأ
+    
     toPlayers(room, { t: 'host-up' });
     return;
   }
@@ -138,12 +142,14 @@ function handle(ws, m) {
     if (typeof m.code !== 'string' || !CODE_RE.test(m.code) || typeof m.cid !== 'string' || !ID_RE.test(m.cid)) return ws.close(4400, 'bad');
     const room = getRoom(m.code, true);
     if (!room) return out(ws, { t: 'busy' });
+    if (room.banned.has(m.cid)) { out(ws, { t: 'kicked' }); return; }
     const old = room.players.get(m.cid);
     if (!old && room.players.size >= MAX_PLAYERS) return out(ws, { t: 'full' });
     if (old && old !== ws) { room.players.delete(m.cid); try { old.close(4001, 'replaced'); } catch (e) {} }
     room.players.set(m.cid, ws); ws.role = 'player'; ws.cid = m.cid; ws.room = room; room.touched = Date.now();
     if (!room.seen.has(m.cid)) { room.seen.add(m.cid); if (room.seen.size <= 200) stats.event('player'); }
     out(ws, { t: 'joined', host: !!room.host });
+    if (canClaim(room, m.cid)) out(ws, { t: 'can-claim', direct: room.offerTo === m.cid });
     return;
   }
 
@@ -153,6 +159,32 @@ function handle(ws, m) {
     if (m.t === 'to' && typeof m.cid === 'string') { out(r.players.get(m.cid), { t: 'msg', msg: m.msg }); return; }
     if (m.t === 'all') { toPlayers(r, { t: 'msg', msg: m.msg }); return; }
     if (m.t === 'stat') { onStat(r, m); return; }
+    // نسخة من حالة اللعبة، حتى إذا طلع الريس حدا تاني يكمّل
+    if (m.t === 'snap') { const d = JSON.stringify(m.data || null); if (d.length < MAX_SNAP) r.snap = m.data; return; }
+    // الريس طلّع لاعب: بينقطع وما بيقدر يرجع لهالقعدة
+    if (m.t === 'kick' && typeof m.cid === 'string' && ID_RE.test(m.cid)) {
+      r.banned.add(m.cid); r.seen.delete(m.cid);
+      const p = r.players.get(m.cid);
+      if (p) { out(p, { t: 'kicked' }); r.players.delete(m.cid); setTimeout(() => { try { p.close(4002, 'kicked'); } catch (e) {} }, 200); }
+      return;
+    }
+    // الريس بيسلّم الريسة للاعب معيّن
+    if (m.t === 'handover' && typeof m.cid === 'string' && r.players.has(m.cid)) {
+      r.offerTo = m.cid; r.host = null; ws.role = null; ws.room = null;
+      hostGone(r);
+      out(r.players.get(m.cid), { t: 'can-claim', direct: true });
+      return;
+    }
+    return;
+  }
+
+  // لاعب بدو ياخد الريسة
+  if (ws.role === 'player' && m.t === 'claim') {
+    if (typeof m.key !== 'string' || !ID_RE.test(m.key)) return;
+    if (!canClaim(r, ws.cid)) return out(ws, { t: 'claim-fail' });
+    r.key = m.key; r.offerTo = null; clearTimeout(r.claimTimer);
+    out(ws, { t: 'claimed', snap: r.snap });
+    r.players.forEach((p, cid) => { if (cid !== ws.cid) out(p, { t: 'claim-taken' }); });
     return;
   }
 
@@ -169,11 +201,24 @@ function onStat(r, m) {
 }
 function clampInt(v, a, b) { v = Math.round(Number(v) || 0); return Math.max(a, Math.min(b, v)); }
 
+function canClaim(r, cid) {
+  if (r.host || !r.snap) return false;
+  if (r.offerTo) return r.offerTo === cid;
+  return Date.now() - r.hostGoneAt >= HANDOVER_MS;
+}
+function hostGone(r) {
+  r.hostGoneAt = Date.now();
+  toPlayers(r, { t: 'host-down', wait: r.offerTo ? 0 : HANDOVER_MS });
+  clearTimeout(r.claimTimer);
+  if (!r.offerTo) r.claimTimer = setTimeout(() => { if (!r.host && r.snap) toPlayers(r, { t: 'can-claim' }); }, HANDOVER_MS + 200);
+}
+
 function leave(ws) {
   const r = ws.room; if (!r) return;
   r.touched = Date.now();
-  if (ws.role === 'host' && r.host === ws) { r.host = null; toPlayers(r, { t: 'host-down' }); }
+  if (ws.role === 'host' && r.host === ws) { r.host = null; hostGone(r); }
   if (ws.role === 'player' && r.players.get(ws.cid) === ws) { r.players.delete(ws.cid); out(r.host, { t: 'drop', cid: ws.cid }); }
+  if (ws.role === 'player' && r.offerTo === ws.cid && !r.host) { r.offerTo = null; hostGone(r); }
 }
 
 // نبضة كل 30 ثانية: بتسكّر الاتصالات الميتة وبتحافظ على الحية

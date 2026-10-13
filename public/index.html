@@ -356,6 +356,84 @@ button.tchip.off{background:transparent;border-style:dashed;border-color:var(--l
 .steps{font-size:14px;line-height:2.1;color:var(--ink2);padding:4px 6px}
 .steps span{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:var(--sun);color:var(--on-sun);font-weight:700;font-size:12px;margin-inline-end:6px}
 .steps svg{width:15px;height:15px;vertical-align:-2px}
+
+.tbtns{display:flex;gap:6px}
+.howto{display:inline-flex;align-items:center;justify-content:center;gap:6px;margin:4px auto 0;font-size:14px;font-weight:600;color:var(--ink2);padding:6px 12px;border-radius:12px}
+.howto svg{width:17px;height:17px}
+.phbtns{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:-6px 0 14px}
+.phbtns .tag{cursor:pointer}
+.editrow{display:flex;gap:8px;align-items:center;width:100%}
+.editrow .field{min-height:46px;font-size:16px;padding:8px 12px;flex:1;min-width:0}
+.btn.mini{width:auto;min-height:46px;padding:0 14px;margin-bottom:4px}
+.settings .seg button{font-variant-numeric:tabular-nums}
+.label svg{width:16px;height:16px;vertical-align:-3px;margin-inline-end:4px}
+.manual{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:600;padding:10px 12px;border-radius:14px;background:var(--bg2)}
+.qpick{display:grid;gap:6px;margin-top:10px;max-height:380px;overflow:auto;padding:2px}
+.qp{display:flex;align-items:center;gap:10px;text-align:start;padding:8px 10px;border-radius:14px;border:1.5px solid var(--line);background:var(--surface)}
+.qp.on{border-color:var(--press);background:color-mix(in srgb,var(--sun) 24%,var(--surface))}
+.qpi{width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:var(--bg2);flex:none}
+.qp.on .qpi{background:var(--sun);color:var(--on-sun)}
+.qpi svg{width:16px;height:16px}
+.qpt{flex:1;min-width:0;font-size:14px;font-weight:500;line-height:1.5}
+.qpn{font-size:11px;color:var(--ink2);white-space:nowrap}
+.qtimer{position:absolute;top:-18px;right:16px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--ink) calc(var(--p)*360deg),var(--bg2) 0);border:2px solid var(--press);box-shadow:0 4px 0 var(--press);z-index:2;transform:rotate(4deg)}
+.qtimer::before{content:"";position:absolute;inset:6px;border-radius:50%;background:var(--surface)}
+.qtimer span{position:relative;font-family:var(--fd);font-size:22px;color:var(--ink)}
+.qtimer.hurry{background:conic-gradient(var(--rose) calc(var(--p)*360deg),var(--bg2) 0);animation:hurry .5s ease-in-out infinite alternate}
+.qtimer.hurry span{color:var(--rose)}
+.qtimer.done{background:var(--rose)}.qtimer.done span{color:var(--rose)}
+@keyframes hurry{to{transform:rotate(-4deg) scale(1.08)}}
+.qcard .qi{margin-inline-start:auto}
+.claimbar{position:fixed;inset:auto 0 0 0;z-index:65;padding:12px 16px max(14px,env(safe-area-inset-bottom));background:var(--bg)}
+.cbin{max-width:540px;margin:0 auto;display:grid;gap:8px;padding:16px;border-radius:22px;background:var(--surface);border:2px solid var(--press);box-shadow:0 6px 0 var(--press);text-align:center}
+.cbt{font-family:var(--fd);font-size:22px;display:flex;align-items:center;justify-content:center;gap:8px}
+.cbt svg{width:24px;height:24px;color:var(--sun)}
+.banner{white-space:normal;max-width:min(92vw,520px);text-align:center;line-height:1.6}
+.sheet{position:fixed;inset:0;z-index:80;display:flex;align-items:flex-end;justify-content:center}
+.sback{position:absolute;inset:0;background:rgba(12,9,26,.55);animation:fade .2s both}
+@keyframes fade{from{opacity:0}}
+.spanel{position:relative;width:100%;max-width:560px;max-height:88dvh;display:flex;flex-direction:column;background:var(--bg);border:2px solid var(--press);border-bottom:0;border-radius:26px 26px 0 0;animation:up .3s cubic-bezier(.2,.9,.3,1.05) both}
+@keyframes up{from{transform:translateY(40%);opacity:0}}
+.shead{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 8px}
+.shead h3{font-size:26px}
+.sbody{overflow:auto;padding:4px 18px max(22px,env(safe-area-inset-bottom))}
+.howlist{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.howlist li{display:flex;gap:12px;align-items:flex-start}
+.howlist .hi{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:var(--pc);color:var(--pf);flex:none;border:2px solid var(--press)}
+.howlist .hi svg{width:20px;height:20px}
+.howlist b{font-family:var(--fd);font-weight:400;font-size:19px}
+.howlist p{margin:0;font-size:14px;color:var(--ink2);line-height:1.8}
+.sbody h4{font-family:var(--fd);font-weight:400;font-size:20px;margin:20px 0 10px}
+.hostkeys{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.hostkeys div{padding:10px 12px;border-radius:14px;background:var(--surface);border:1.5px solid var(--line);display:grid;gap:2px}
+.hostkeys span svg{width:18px;height:18px}
+.hostkeys b{font-size:14px}.hostkeys small{font-size:12px;color:var(--ink2);line-height:1.6}
+.notes{margin:0;padding-inline-start:18px;display:grid;gap:6px;font-size:14px;color:var(--ink2);line-height:1.8}
+.mlist{display:grid;gap:4px}
+.mrow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1.5px dashed var(--line)}
+.mrow:last-child{border:0}
+.mmid{flex:1;min-width:0}
+.mn{font-weight:600;font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.macts{display:flex;gap:6px}
+.iconbtn.warn{width:auto;padding:0 10px;font-size:12px;font-weight:700;background:var(--rose);color:var(--on-deep);border-color:var(--press)}
+.hint2 svg{width:14px;height:14px;vertical-align:-2px}
+.cam{position:fixed;inset:0;background:#0C091A;z-index:110;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px}
+.cam .hint{color:#E6DFF2;font-size:15px;font-weight:600}
+.camst{position:relative;width:min(88vw,400px);aspect-ratio:1;max-height:62dvh;border-radius:30px;overflow:hidden;box-shadow:0 0 0 3px #F0B54E;background:#000}
+.camst.tall{aspect-ratio:4/5}
+.camst video{width:100%;height:100%;object-fit:cover;display:block}
+.camcd{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--fd);font-weight:400;font-size:120px;color:#fff;text-shadow:0 6px 0 rgba(0,0,0,.3);pointer-events:none}
+.camcd.go{animation:cnt .95s ease-out both}
+.camrow{display:flex;align-items:center;gap:28px}
+.cbtn{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.12);color:#fff}
+.cbtn svg{width:24px;height:24px}
+.shutter{width:76px;height:76px;border-radius:50%;background:#F0B54E;border:5px solid #fff;box-shadow:0 0 0 3px #F0B54E}
+.shutter:active{transform:scale(.92)}
+.cam .tag{background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
+.cam.flash::after{content:"";position:fixed;inset:0;background:#fff;animation:fade .18s reverse both}
+.waitpill svg{width:18px;height:18px}
+.chips button svg{width:15px;height:15px;vertical-align:-2px}
+.banner{top:calc(max(10px,env(safe-area-inset-top)) + 50px)!important}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01s!important;animation-iteration-count:1!important;transition:none!important}}
 @media (min-width:700px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 </style>
@@ -387,7 +465,27 @@ const QS=[
  {i:'money',t:'رح يصير مليونير',m:'المليونير الجاي',f:'المليونيرة الجاية'},
  {i:'mobile',t:'لاصق بالموبايل حتى بالقعدة',m:'أسير الموبايل',f:'أسيرة الموبايل'},
  {i:'moon',t:'بينعس أول واحد بالسهرة',m:'نعسان السهرة',f:'نعسانة السهرة'},
- {i:'cap',t:'بيعطي نصايح وما بيطبّقها',m:'الناصح',f:'الناصحة'}
+ {i:'cap',t:'بيعطي نصايح وما بيطبّقها',m:'الناصح',f:'الناصحة'},
+ {i:'news',t:'بيعرف أخبار الكل قبل ما تصير',m:'نشرة الأخبار',f:'نشرة الأخبار'},
+ {i:'map',t:'بيضيع بالطريق حتى مع الخريطة',m:'ضايع الطريق',f:'ضايعة الطريق'},
+ {i:'hand',t:'بيحكي بإيديه أكتر من تمّو',m:'أبو الإشارات',f:'أم الإشارات'},
+ {i:'run',t:'أول واحد بيفزع إذا حدا احتاج',m:'الفزّيع',f:'الفزّيعة'},
+ {i:'pot',t:'نفَسو طيب بالطبخ',m:'الشيف',f:'الشيفة'},
+ {i:'dance',t:'بيقوم يدبك بأول دقة طبل',m:'ملك الدبكة',f:'ملكة الدبكة'},
+ {i:'camera',t:'بيتصوّر سيلفي بكل مناسبة',m:'ملك السيلفي',f:'ملكة السيلفي'},
+ {i:'cake',t:'بينسى أعياد الميلاد والمواعيد',m:'ذاكرة السمكة',f:'ذاكرة السمكة'},
+ {i:'pen',t:'بيطلّع ألقاب للناس وبتلزق فيهن',m:'مخترع الألقاب',f:'مخترعة الألقاب'},
+ {i:'chat',t:'بيرد عالرسالة بعد يومين',m:'سلحفاة الواتساب',f:'سلحفاة الواتساب'},
+ {i:'mountain',t:'بيحب المغامرة وما بيخاف من شي',m:'المغامر',f:'المغامرة'},
+ {i:'calendar',t:'بيحفظ أعياد ميلاد الكل',m:'الذاكرة الحديدية',f:'الذاكرة الحديدية'},
+ {i:'laugh',t:'بيضحك عأتفه نكتة',m:'الضحّوك',f:'الضحّوكة'},
+ {i:'fire',t:'باين هادي بس جوّاتو بركان',m:'البركان الهادي',f:'البركان الهادي'},
+ {i:'clip',t:'بيرتّب كل تفاصيل الطلعة',m:'المخطّط',f:'المخطّطة'},
+ {i:'scale',t:'بيقدر يقنعك بأي شي',m:'المحامي',f:'المحامية'},
+ {i:'key',t:'دايماً بيدوّر على مفاتيحو',m:'صاحب المفاتيح الضايعة',f:'صاحبة المفاتيح الضايعة'},
+ {i:'radio',t:'ما بيسكت إذا فتح موضوع',m:'الراديو',f:'الراديو'},
+ {i:'rocket',t:'أول واحد بيتحمّس لأي طلعة',m:'محرّك القعدة',f:'محرّكة القعدة'},
+ {i:'gift',t:'بيجيب هدايا بتجنن',m:'ملك الهدايا',f:'ملكة الهدايا'}
 ];
 const ICONS={
  sigh:'<path d="M7 15h10a4 4 0 0 0 0-8 5 5 0 0 0-9.6 1.4A3.3 3.3 0 0 0 7 15z"/><path d="M9 18l-1 2M13 18l-1 2M17 18l-1 2"/>',
@@ -434,6 +532,27 @@ const ICONS={
  music:'<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
  money:'<rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 9v.01M18 15v.01"/>',
  x:'<path d="M6 6l12 12M18 6L6 18"/>',
+ news:'<rect x="3" y="5" width="15" height="15" rx="1"/><path d="M18 9h3v9a2 2 0 0 1-2 2M7 9h7M7 13h7M7 16h4"/>',
+ map:'<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/>',
+ hand:'<path d="M8 13V5a1.5 1.5 0 0 1 3 0v6M11 10V4a1.5 1.5 0 0 1 3 0v7M14 10V6a1.5 1.5 0 0 1 3 0v8a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-3l-2.5-4.5a1.5 1.5 0 0 1 2.6-1.5L8 13"/>',
+ run:'<circle cx="15" cy="4" r="2"/><path d="M8 21l3-6 3 3v4M6 12l3-4 4 1 3 4h3M11 15l2-6"/>',
+ pot:'<path d="M4 10h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M2 10h20M9 6c0-1 1-1 1-2M14 6c0-1 1-1 1-2"/>',
+ dance:'<circle cx="12" cy="4" r="2"/><path d="M12 6v7l-4 8M12 13l4 8M6 9l6-1 6 1"/>',
+ chat:'<path d="M4 5h16v11H8l-4 4z"/><path d="M9 10.5h.01M12 10.5h.01M15 10.5h.01"/>',
+ mountain:'<path d="M3 20l6-11 4 6 3-4 5 9z"/><path d="M8 11l1.5 1.5L11 11"/>',
+ calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M12 14v3"/>',
+ fire:'<path d="M12 22a7 7 0 0 0 7-7c0-4-3-6-4-10-2 2-3 4-3 6-1-1-2-2-2-4-2 2-5 5-5 8a7 7 0 0 0 7 7z"/>',
+ clip:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10l2 2 4-4M9 16h6"/>',
+ scale:'<path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/>',
+ key:'<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/>',
+ radio:'<rect x="3" y="8" width="18" height="13" rx="2"/><circle cx="15" cy="14.5" r="3"/><path d="M7 12h3M7 15h3M7 18h3M6 8l11-5"/>',
+ rocket:'<path d="M12 2c3 2 5 6 5 10l-2 4H9l-2-4c0-4 2-8 5-10z"/><circle cx="12" cy="9" r="2"/><path d="M9 16l-2 5 3-2M15 16l2 5-3-2"/>',
+ help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17h.01"/>',
+ people:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.3-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M19 8v6M16 11h6"/>',
+ timer:'<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6M19 5l1.5-1.5"/>',
+ swap:'<path d="M4 8h13l-3-3M20 16H7l3 3"/>',
+ flipcam:'<path d="M4 8h3l2-3h6l2 3h3v12H4z"/><path d="M9 13a3 3 0 0 1 5.5-1.5M15 14a3 3 0 0 1-5.5 1.5M14.5 9.5v2h-2M9.5 17.5v-2h2"/>',
+ trash:'<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',
  group:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.3-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5c2 .7 3.2 2.6 3.5 5.5"/>'
 };
 const ic=(k,c='')=>`<svg class="ic ${c}" viewBox="0 0 24 24" aria-hidden="true">${ICONS[k]||ICONS.spark}</svg>`;
@@ -452,7 +571,9 @@ const newCode=()=>rnd(5).map(b=>CODE_AL[b%32]).join('');
 const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a};
 function seeded(seed){let h=1779033703^seed.length;for(let i=0;i<seed.length;i++){h=Math.imul(h^seed.charCodeAt(i),3432918353);h=h<<13|h>>>19}return()=>{h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
 const sshuffle=(a,seed)=>{const r=seeded(seed);a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a};
-const store={get(k){try{return JSON.parse(sessionStorage.getItem(k))}catch(e){return null}},set(k,v){try{sessionStorage.setItem(k,JSON.stringify(v))}catch(e){}},del(k){try{sessionStorage.removeItem(k)}catch(e){}}};
+/* الحفظ: localStorage حتى لو انسكّرت الصفحة ورجع فتح الرابط بيرجع لمكانو (ووضع التجربة المحلية بيستعمل sessionStorage) */
+const SST=()=>/[?&]local/.test(location.search)?sessionStorage:localStorage;
+const store={get(k){try{return JSON.parse(SST().getItem(k))}catch(e){return null}},set(k,v){try{SST().setItem(k,JSON.stringify(v))}catch(e){}},del(k){try{SST().removeItem(k)}catch(e){}}};
 const params=new URLSearchParams(location.search);
 const LOCAL=params.has('local');
 let DEMO=params.has('demo');
@@ -464,7 +585,7 @@ function toast(msg){const t=document.createElement('div');t.className='toast';t.
 /* ================= الحالة ================= */
 let ROLE=null,CODE=null,ME=null,NET=null,H=null,S=null;
 let ROSTER=[];
-const UI={screen:'cover',profile:{name:'',photo:null},ranks:[],rkey:null,revealDone:{},conn:'idle',joined:false,
+const UI={expired:{},screen:'cover',profile:{name:'',photo:null},ranks:[],rkey:null,revealDone:{},conn:'idle',joined:false,
  codeInput:'',customOpen:false,customText:'',wrap:{type:'شلة',name:'',photo:null},layout:'cover',imgTheme:null,story:{},lastKey:null};
 const byId=pid=>ROSTER.find(p=>p.pid===pid);
 const nameOf=pid=>{const p=byId(pid);return p?p.name:'؟'};
@@ -480,7 +601,7 @@ function hostNet(code,h){
   const bc=new BroadcastChannel(PREFIX+code);
   bc.onmessage=e=>{const d=e.data;if(d.to!=='H')return;if(d.msg&&d.msg.t==='bye')h.drop(d.from);else h.msg(d.from,d.msg)};
   setTimeout(h.ready,60);
-  return{send:(cid,m)=>bc.postMessage({to:cid,from:'H',msg:m}),all:m=>bc.postMessage({to:'*',from:'H',msg:m}),stat(){}};
+  return{send:(cid,m)=>bc.postMessage({to:cid,from:'H',msg:m}),all:m=>bc.postMessage({to:'*',from:'H',msg:m}),stat(){},snap(){},kick:cid=>bc.postMessage({to:cid,from:'H',msg:{t:'kicked'}})};
  }
  return wsNet({t:'host',code,key:H.key},{
   open(){},
@@ -491,7 +612,7 @@ function hostNet(code,h){
    else if(m.t==='drop'&&typeof m.cid==='string')h.drop(m.cid);
   },
   down(){h.error('down')}
- },(sock)=>({send:(cid,msg)=>sock.send({t:'to',cid,msg}),all:msg=>sock.send({t:'all',msg}),stat:m=>sock.send({t:'stat',...m}),close:()=>sock.close()}));
+ },(sock)=>({send:(cid,msg)=>sock.send({t:'to',cid,msg}),all:msg=>sock.send({t:'all',msg}),stat:m=>sock.send({t:'stat',...m}),snap:d=>sock.send({t:'snap',data:d}),kick:cid=>sock.send({t:'kick',cid}),handover:cid=>sock.send({t:'handover',cid}),close:()=>sock.close()}));
 }
 /* اتصال WebSocket بسيرفر القعدة، مع إعادة اتصال تلقائية */
 function wsNet(hello,h,api){
@@ -518,25 +639,32 @@ function playerNet(code,h){
   bc.onmessage=e=>{const d=e.data;if(d.to===cid||d.to==='*')h.msg(d.msg)};
   addEventListener('pagehide',()=>bc.postMessage({to:'H',from:cid,msg:{t:'bye'}}));
   setTimeout(h.up,40);
-  return{send:m=>bc.postMessage({to:'H',from:cid,msg:m})};
+  return{send:m=>bc.postMessage({to:'H',from:cid,msg:m}),close(){try{bc.close()}catch(e){}}};
  }
  return wsNet({t:'join',code,cid:ME},{
   in(m){
    if(m.t==='joined'){if(m.host)h.up();else h.down('nohost');return}
    if(m.t==='host-up'){h.up();return}
-   if(m.t==='host-down'||m.t==='nohost'){h.down('nohost');return}
+   if(m.t==='host-down'||m.t==='nohost'){h.down('nohost',m.wait);return}
    if(m.t==='full'){h.down('full');return}
+   if(m.t==='kicked'){h.kicked();return}
+   if(m.t==='can-claim'){h.canClaim(!!m.direct);return}
+   if(m.t==='claimed'){h.claimed(m.snap);return}
+   if(m.t==='claim-fail'||m.t==='claim-taken'){h.claimFail(m.t);return}
    if(m.t==='msg')h.msg(m.msg);
   },
   down(why){h.down(why)}
- },(sock)=>({send:msg=>sock.send({t:'up',msg})}));
+ },(sock)=>({send:msg=>sock.send({t:'up',msg}),claim:key=>sock.send({t:'claim',key}),close:()=>sock.close()}));
 }
 
 /* ================= الريس (صاحب الحالة) ================= */
-function hostSave(){if(!H)return;const c={...H,players:{}};for(const k in H.players){const p=H.players[k];c.players[k]={pid:p.pid,name:p.name,photo:p.photo,g:p.g,host:p.host,on:p.host||p.bot,bot:p.bot,conn:p.host?'self':p.bot?'bot':null}}store.set('qa3da-host-'+H.code,c)}
+function snapData(){const c={...H,players:{}};for(const k in H.players){const p=H.players[k];c.players[k]={pid:p.pid,name:p.name,photo:p.photo,g:p.g,host:p.host,on:p.host||p.bot,bot:p.bot,conn:p.host?'self':p.bot?'bot':null}}return c}
+let snapT=null;
+function hostSave(){if(!H)return;const c=snapData();store.set('qa3da-host-'+H.code,c);
+ if(!H.demo&&NET&&NET.snap){clearTimeout(snapT);snapT=setTimeout(()=>{if(H&&NET&&NET.snap)NET.snap(snapData())},700)}}
 function startHost(){
  ROLE='host';CODE=newCode();ME=rid();
- H={v:2,demo:DEMO,key:rid(),code:CODE,players:{},deck:[],pos:-1,queue:[],extra:[],asked:0,phase:'lobby',cur:null,votes:{},history:[],round:0,last:null,final:null,prev:'lobby',cer:0};
+ H={v:3,demo:DEMO,key:rid(),code:CODE,players:{},deck:[],pos:-1,queue:[],extra:[],asked:0,phase:'lobby',cur:null,votes:{},history:[],round:0,last:null,final:null,prev:'lobby',cer:0,qcount:20,manual:null,timer:0};
  H.players[ME]={pid:ME,name:UI.profile.name.trim()||'الريس',photo:UI.profile.photo,g:UI.profile.g||'m',on:true,conn:'self',host:true};
  store.set('qa3da-me-'+CODE,ME);
  try{history.replaceState(null,'','?r='+CODE+'&h=1'+(LOCAL?'&local=1':'')+(DEMO?'&demo=1':''));}catch(e){}
@@ -545,9 +673,10 @@ function startHost(){
 function resumeHost(saved){
  ROLE='host';H=saved;CODE=H.code;ME=store.get('qa3da-me-'+CODE);
  if(!ME||!H.players[ME]){ME=Object.keys(H.players).find(k=>H.players[k].host)}
- if(H.final){UI.wrap={type:H.final.type||'شلة',name:H.final.name||'',photo:H.final.photo||null}}
+ wrapFromFinal();
  bootHostNet();
 }
+function wrapFromFinal(){if(H&&H.final){const t=H.final.type||'شلة';const other=!GROUP_TYPES.includes(t);UI.wrap={type:t,name:H.final.name||'',photo:H.final.photo||null,other,otherText:other?t:''}}}
 function bootHostNet(){
  if(!H.key)H.key=rid();
  if(H.demo){DEMO=true;NET={send(){},all(){},stat(){}};UI.conn='up';UI.screen='game';pushRoster();pushState();if(!Object.values(H.players).some(p=>p.bot))addBots();else if(H.phase==='q')botsVote();return}
@@ -557,19 +686,20 @@ function bootHostNet(){
   drop(cid){for(const k in H.players){const p=H.players[k];if(p.conn===cid){p.on=false;p.conn=null}}pushRoster();pushState()},
   error(t){UI.conn='err';UI.netErr=t;render()},
   taken(){
-   if(H.history.length||Object.keys(H.players).length>1){UI.conn='err';render();return}
+   if(H.history.length||Object.keys(H.players).length>1){toast('صار في ريس تاني للقعدة، رجعت لاعب');convertToPlayer();return}
    NET&&NET.close&&NET.close();store.del('qa3da-host-'+H.code);CODE=H.code=newCode();store.set('qa3da-me-'+CODE,ME);
    try{history.replaceState(null,'','?r='+CODE+'&h=1')}catch(e){}bootHostNet();
   }
  });
- UI.screen='game';pushRoster();pushState();keepAwake();
+ UI.screen='game';pushRoster();pushState();keepAwake();armTimer();
 }
 function hostMsg(cid,m){
  if(!m||typeof m!=='object')return;
  if(m.t==='join'&&typeof m.pid==='string'){
   let p=H.players[m.pid];
   if(!p){p=H.players[m.pid]={pid:m.pid};p.name=cleanName(m.name)||('ضيف '+(Object.keys(H.players).length))}
-  else if(m.name)p.name=cleanName(m.name)||p.name;
+  else if(m.name&&!p.renamed)p.name=cleanName(m.name)||p.name;
+  else if(m.name&&p.renamed&&cleanName(m.name)===p.name)p.renamed=false;
   if(typeof m.photo==='string'&&m.photo.startsWith('data:image/')&&m.photo.length<400000)p.photo=m.photo;
   if(m.g==='m'||m.g==='f')p.g=m.g;else if(!p.g)p.g='m';
   p.on=true;p.conn=cid;if(cid==='bot')p.bot=true;
@@ -577,10 +707,12 @@ function hostMsg(cid,m){
   pushRoster();pushState();
  }else if(m.t==='vote'){
   if(H.phase!=='q'||!H.cur||m.key!==H.cur.key||!H.players[m.pid]||!Array.isArray(m.ranks))return;
+  if(H.cur.dl&&Date.now()>H.cur.dl+2500)return;
   const r=[...new Set(m.ranks)].filter(id=>H.players[id]).slice(0,3);
   if(!r.length)return;H.votes[m.pid]=r;pushState();
  }else if(m.t==='unvote'){
-  if(H.phase!=='q'||!H.cur||m.key!==H.cur.key)return;delete H.votes[m.pid];pushState();
+  if(H.phase!=='q'||!H.cur||m.key!==H.cur.key)return;if(H.cur.dl&&Date.now()>H.cur.dl)return;delete H.votes[m.pid];pushState();
+ }else if(m.t==='myname'&&H.players[m.pid]){const n=cleanName(m.name);if(n){H.players[m.pid].name=n;H.players[m.pid].renamed=false;pushRoster();pushState()}
  }
 }
 const cleanName=n=>String(n||'').replace(/\s+/g,' ').trim().slice(0,22);
@@ -588,9 +720,11 @@ const cleanQ=t=>String(t||'').replace(/\s+/g,' ').replace(/^مين\s+/,'').repla
 function rosterList(){return Object.values(H.players).map(p=>({pid:p.pid,name:p.name,photo:p.photo||null,g:p.g||'m',on:!!p.on,host:!!p.host}))}
 function pushRoster(){ROSTER=rosterList();NET&&NET.all({t:'roster',players:ROSTER});hostSave();render()}
 function leftCount(){return Math.max(0,H.deck.length-(H.pos+1))+H.queue.length}
+function lobbyCount(){return (H.manual&&H.manual.length?H.manual.length:Math.min(H.qcount||20,QS.length))+H.extra.length}
 function pubState(){
  const end=H.phase==='cer'||H.phase==='final';
- return{phase:H.phase,code:H.code,asked:H.asked,left:H.phase==='lobby'?QS.length+H.extra.length:leftCount(),q:H.cur,voted:Object.keys(H.votes),
+ return{phase:H.phase,code:H.code,asked:H.asked,left:H.phase==='lobby'?lobbyCount():leftCount(),q:H.cur,voted:Object.keys(H.votes),timer:H.timer||0,
+  tLeft:H.phase==='q'&&H.cur&&H.cur.dl?Math.max(0,H.cur.dl-Date.now()):null,
   extra:H.phase==='lobby'?H.extra:null,
   result:H.phase==='reveal'?H.last:null,
   history:end?H.history:null,final:end?H.final:null,cer:H.phase==='cer'?H.cer:null};
@@ -615,9 +749,14 @@ function saveCur(revealed){
  if(prev)H.history[i]=r;else{H.history.push(r);NET.stat({ev:'round',q:H.cur.t,custom:!!H.cur.custom,voters:r.voters})}
  return r;
 }
+/* المؤقت عند الريس: لما يخلص الوقت بيتحدّث الكل */
+let timerT=null;
+function armTimer(){clearTimeout(timerT);if(!H||H.phase!=='q'||!H.cur||!H.cur.dl)return;const ms=H.cur.dl-Date.now();
+ timerT=setTimeout(()=>{if(H&&H.phase==='q')pushState()},Math.max(0,ms)+60)}
 const HOST={
  start(){
-  H.deck=shuffle(QS.map(q=>({i:q.i,t:q.t,m:q.m,f:q.f})).concat(H.extra.map(t=>({i:'pen',t,custom:true}))));
+  const base=H.manual&&H.manual.length?H.manual.map(i=>QS[i]).filter(Boolean):shuffle(QS).slice(0,Math.min(H.qcount||20,QS.length));
+  H.deck=shuffle(base.map(q=>({i:q.i,t:q.t,m:q.m,f:q.f})).concat(H.extra.map(t=>({i:'pen',t,custom:true}))));
   H.pos=-1;H.queue=[];
   NET.stat({ev:'start',n:Object.values(H.players).filter(p=>p.on).length});HOST.next();
  },
@@ -626,7 +765,8 @@ const HOST={
   if(H.queue.length)q=H.queue.shift();
   else if(H.pos+1<H.deck.length){H.pos++;q=H.deck[H.pos]}
   if(!q){HOST.wrap();return}
-  H.round++;H.asked++;H.cur={key:'r'+H.round,...q};H.votes={};H.phase='q';H.last=null;pushState();botsVote();
+  H.round++;H.asked++;H.cur={key:'r'+H.round,...q};if(H.timer){H.cur.dl=Date.now()+H.timer*1000;H.cur.dur=H.timer}
+  H.votes={};H.phase='q';H.last=null;pushState();botsVote();armTimer();
  },
  reveal(){if(H.phase!=='q')return;const r=saveCur(true);H.last=r;H.phase='reveal';pushState()},
  silentNext(){if(H.phase!=='q')return;saveCur(false);HOST.next()},
@@ -653,6 +793,20 @@ const HOST={
  cerNext(){if(H.phase!=='cer')return;H.cer++;if(H.cer>H.history.length){H.phase='final'}pushState()},
  toFinal(){H.phase='final';pushState()},
  back(){H.prev='final';H.phase='wrap';pushState()},
+ setCount(n){H.qcount=Math.max(1,Math.min(QS.length,Number(n)||20));H.manual=null;pushState()},
+ setTimer(t){H.timer=Math.max(0,Math.min(120,Number(t)||0));pushState()},
+ toggleQ(i){i=Number(i);if(!H.manual)H.manual=[];const k=H.manual.indexOf(i);if(k>=0)H.manual.splice(k,1);else H.manual.push(i);if(!H.manual.length)H.manual=null;pushState()},
+ randomQs(){H.manual=null;pushState()},
+ addTime(){if(H.phase!=='q'||!H.cur||!H.cur.dl)return;H.cur.dl=Math.max(H.cur.dl,Date.now())+15000;H.cur.dur=(H.cur.dur||0)+15;pushState();armTimer()},
+ rename(pid,name){const p=H.players[pid];name=cleanName(name);if(!p||!name)return;p.name=name;p.renamed=pid!==ME;
+  if(pid!==ME&&p.conn&&p.conn!=='bot')NET.send(p.conn,{t:'renamed',name});pushRoster();pushState()},
+ kick(pid){const p=H.players[pid];if(!p||p.host)return;
+  if(p.conn&&p.conn!=='bot'&&p.conn!=='self'&&NET.kick)NET.kick(p.conn);else if(!p.on&&NET.kick&&!H.demo)NET.kick(pid);
+  delete H.players[pid];delete H.votes[pid];
+  for(const k in H.votes){H.votes[k]=H.votes[k].filter(x=>x!==pid);if(!H.votes[k].length)delete H.votes[k]}
+  pushRoster();pushState()},
+ handover(pid){const p=H.players[pid];if(!p||!p.on||p.bot||!NET.handover)return;
+  NET.snap(snapData());NET.handover(p.conn);UI.sheet=null;setTimeout(()=>convertToPlayer('handover'),350)},
  toggleHide(pid,key){if(!H.final)return;const h=H.final.hide;const a=h[pid]||(h[pid]=[]);const i=a.indexOf(key);if(i>=0)a.splice(i,1);else a.push(key);if(!a.length)delete h[pid];pushState()}
 };
 
@@ -677,17 +831,24 @@ function botsVote(){
 }
 
 /* ================= اللاعب ================= */
+function savePlayer(){store.set('qa3da-p-'+CODE,{pid:ME,name:UI.profile.name,photo:UI.profile.photo,g:UI.profile.g})}
 function joinAsPlayer(){
  ROLE='player';UI.screen='game';
  if(!ME){ME=rid()}
- store.set('qa3da-p-'+CODE,{pid:ME,name:UI.profile.name,photo:UI.profile.photo,g:UI.profile.g});
+ savePlayer();
  let resend=null;
  const sendJoin=()=>NET.send({t:'join',pid:ME,name:UI.profile.name,photo:UI.profile.photo,g:UI.profile.g});
  NET=playerNet(CODE,{
-  up(){UI.conn='up';sendJoin();clearInterval(resend);resend=setInterval(()=>{if(!UI.joined)sendJoin();else clearInterval(resend)},2500);render()},
-  down(why){UI.conn=why==='nohost'?'nohost':why==='full'?'full':'down';UI.joined=false;UI.netErr=why;render()},
+  up(){UI.conn='up';UI.canClaim=false;UI.hostWait=null;sendJoin();clearInterval(resend);resend=setInterval(()=>{if(!UI.joined)sendJoin();else clearInterval(resend)},2500);render()},
+  down(why,wait){UI.conn=why==='nohost'?'nohost':why==='full'?'full':'down';UI.joined=false;UI.netErr=why;if(why==='nohost'&&wait&&!UI.canClaim)UI.hostWait=Date.now()+wait;render()},
+  kicked(){UI.kicked=true;store.del('qa3da-p-'+CODE);try{localStorage.setItem('qa3da-kicked-'+CODE,'1')}catch(e){}clearInterval(resend);try{NET.close&&NET.close()}catch(e){}lastHTML='';render()},
+  canClaim(direct){if(direct){doClaim();return}UI.canClaim=true;UI.hostWait=null;render()},
+  claimed(snap){if(!snap){toast('ما قدرنا ناخد الريسة');UI.claiming=false;render();return}clearInterval(resend);becomeHost(snap)},
+  claimFail(t){UI.canClaim=false;UI.claiming=false;if(t==='claim-taken')toast('في حدا تاني صار الريس');else toast('ما زبطت، جرّب كمان شوي');render()},
   msg(m){
    if(!m||typeof m!=='object')return;
+   if(m.t==='kicked'){this.kicked();return}
+   if(m.t==='renamed'&&m.name){UI.profile.name=m.name;savePlayer();return}
    if(m.t==='hello'){UI.joined=false;sendJoin();return}
    if(m.t==='welcome'){UI.joined=true;UI.conn='up';render();return}
    if(m.t==='roster'&&Array.isArray(m.players)){ROSTER=m.players;render();return}
@@ -697,6 +858,31 @@ function joinAsPlayer(){
  keepAwake();render();
 }
 function send(m){if(ROLE==='host')hostMsg('self',m);else NET&&NET.send(m)}
+function doClaim(){if(!NET||!NET.claim)return;UI.claimKey=rid();UI.claiming=true;NET.claim(UI.claimKey);render()}
+/* لاعب بيصير الريس: بياخد آخر نسخة من اللعبة وبيكمّل منها */
+function becomeHost(snap){
+ try{NET&&NET.close&&NET.close()}catch(e){}
+ ROLE='host';H=snap;CODE=H.code;H.key=UI.claimKey||rid();H.demo=false;
+ for(const k in H.players){const p=H.players[k];p.host=false;if(p.conn!=='bot'){p.on=false;p.conn=null}}
+ if(!H.players[ME])H.players[ME]={pid:ME,name:cleanName(UI.profile.name)||'الريس',photo:UI.profile.photo,g:UI.profile.g||'m'};
+ Object.assign(H.players[ME],{host:true,on:true,conn:'self',renamed:false});
+ if(H.phase==='q'&&H.cur&&H.cur.dl)H.cur.dl=Date.now()+Math.max(10000,(H.cur.dl-Date.now()));
+ store.set('qa3da-me-'+CODE,ME);store.del('qa3da-p-'+CODE);
+ try{history.replaceState(null,'','?r='+CODE+'&h=1')}catch(e){}
+ wrapFromFinal();UI.canClaim=false;UI.claiming=false;UI.hostWait=null;UI.conn='idle';lastHTML='';
+ bootHostNet();toast(isF(ME)?'صرتِ الريس، كمّلي اللعبة':'صرت الريس، كمّل اللعبة');
+}
+/* الريس بيرجع لاعب (سلّم الريسة أو حدا تاني صار الريس) */
+function convertToPlayer(){
+ const me=H&&H.players[ME];
+ clearTimeout(timerT);clearTimeout(snapT);
+ try{NET&&NET.close&&NET.close()}catch(e){}
+ store.del('qa3da-host-'+CODE);
+ UI.profile={name:me?me.name:UI.profile.name,photo:me?me.photo:UI.profile.photo,g:me?me.g:(UI.profile.g||'m')};
+ H=null;ROLE='player';UI.sheet=null;UI.joined=false;
+ try{history.replaceState(null,'','?r='+CODE)}catch(e){}
+ joinAsPlayer();
+}
 
 /* ================= شاشة مضاءة ================= */
 let lock=null;
@@ -716,8 +902,9 @@ const youTag=pid=>pid===ME?(isF(pid)?' (إنتِ)':' (إنت)'):'';
 /* اللقب القصير حسب شب/صبية */
 function nick(q,pid){if(!q)return'';if(q.custom||!q.m)return q.t;return isF(pid)&&q.f?q.f:q.m}
 function topBar(right){
+ const mng=ROLE==='host'&&UI.screen==='game'?`<button class="iconbtn" data-a="sheet" data-v="manage" aria-label="إدارة اللاعبين">${ic('people')}</button>`:'';
  return `<div class="top"><div class="brand"><span class="cards"><i></i><i></i></span>${right||'قعدة رواق'}</div>
- <button class="iconbtn" data-a="theme" aria-label="الوضع">${ic(themeNow()==='dark'?'sun':'moonT')}</button></div>`;
+ <div class="tbtns">${mng}<button class="iconbtn" data-a="sheet" data-v="help" aria-label="كيف منلعب">${ic('help')}</button><button class="iconbtn" data-a="theme" aria-label="الوضع">${ic(themeNow()==='dark'?'sun':'moonT')}</button></div></div>`;
 }
 const SIG=`<div class="sig">إعداد م. إياد حلوبي</div>`;
 function vCover(){
@@ -742,6 +929,7 @@ function vCover(){
   :`<button class="btn" data-a="hostProfile">${ic('plus')} افتح قعدة جديدة</button>
    <button class="btn ghost" data-a="codeScreen">معي كود قعدة</button>
    ${SHOW_DEMO?`<button class="btn flat" data-a="demoProfile">${ic('eye')} جرّب لحالك (لاعبين وهميين)</button>`:''}`}
+  <button class="howto" data-a="sheet" data-v="help">${ic('help')} كيف منلعب؟</button>
  </div>
  ${SIG}</div>`;
 }
@@ -762,7 +950,8 @@ function vProfile(){
  <p class="muted small" style="margin:0">الاسم والصورة اختياريين، بس بيخلّوا التصويت أحلى.</p>
  <div><label class="pick ${p.photo?'has':''}" for="fileAva">${p.photo?`<img src="${p.photo}" alt="">`:`<span>${ic('camera')}صورتك<br>(اختياري)</span>`}</label>
  <input type="file" id="fileAva" accept="image/*" hidden data-file="ava">
- ${p.photo?`<div style="text-align:center;margin:-8px 0 14px"><button class="tag" data-a="rmAva">شيل الصورة</button></div>`:''}</div>
+ <input type="file" id="camAva" accept="image/*" capture="user" hidden data-file="ava">
+ <div class="phbtns"><button class="tag sun" data-a="selfie" data-v="ava">${ic('camera')} التقط سيلفي</button><label class="tag" for="fileAva">${ic('down')} من الصور</label>${p.photo?`<button class="tag" data-a="rmAva">${ic('x')} شيل</button>`:''}</div></div>
  <input id="nameIn" class="field" data-in="name" maxlength="22" placeholder="اسمك متل ما بتعرفك الشلة" value="${esc(p.name)}" autocomplete="off">
  <div class="gpickr" role="radiogroup" aria-label="شب أو صبية">
   <button class="${p.g==='m'?'on':''}" role="radio" aria-checked="${p.g==='m'}" data-a="pickG" data-v="m">شب</button>
@@ -773,6 +962,10 @@ function vProfile(){
  ${SIG}</div>`;
 }
 function connBanner(){
+ if(ROLE==='player'&&UI.kicked)return '';
+ if(ROLE==='player'&&UI.conn==='nohost'&&(UI.canClaim||UI.claiming))return `<div class="claimbar"><div class="cbin"><div class="cbt">${ic('crown')} الريس طلع من القعدة</div><div class="small">اللعبة محفوظة. حدا منكن ياخد الريسة ويكمّل.</div>
+  <button class="btn" data-a="claim" ${UI.claiming?'disabled':''}>${UI.claiming?'لحظة…':meF()?'خليني أنا الريسة':'خليني أنا الريس'}</button></div></div>`;
+ if(ROLE==='player'&&UI.conn==='nohost'&&UI.hostWait&&S)return `<div class="banner">${ic('wifi')} الريس مو متصل. إذا ما رجع خلال <b id="hwait">${Math.max(0,Math.ceil((UI.hostWait-Date.now())/1000))}</b> ثانية، فيكن تختاروا ريس جديد</div>`;
  if(ROLE==='player'&&UI.conn!=='up')return `<div class="banner">${ic('wifi')} ${UI.conn==='nohost'?'الريس مو متصل هلأ، ناطرينو…':'عم نوصل عالقعدة…'}</div>`;
  if(ROLE==='host'&&UI.conn==='err')return `<div class="banner">${ic('wifi')} في مشكلة بالإنترنت، عم نعيد المحاولة</div>`;
  return '';
@@ -803,12 +996,13 @@ function vLobby(){
   </div>
   <div class="sech"><h3>مين جوّا القعدة</h3><span class="tag sun">${on.length} موجودين</span></div>
   <div class="people">${peopleHTML()}</div>
-  <div class="sech"><h3>أسئلة من عندكن</h3><span class="tag">${QS.length+ex.length} سؤال</span></div>
+  ${settingsCard()}
+  <div class="sech"><h3>أسئلة من عندكن</h3><span class="tag">${ex.length}</span></div>
   <div class="card extras">
    <label class="prefix"><span>مين أكتر حدا</span><input id="extraIn" data-in="customText" maxlength="60" placeholder="كمّل السؤال…" value="${esc(UI.customText)}"></label>
    <button class="btn ghost" data-a="addExtra" style="margin-top:10px">${ic('plus')} زيد السؤال</button>
    ${ex.length?`<div class="exlist">${ex.map((t,i)=>`<div class="exi"><span>مين أكتر حدا ${esc(t)}؟</span><button class="iconbtn sm" data-a="rmExtra" data-v="${i}" aria-label="احذف">${ic('x')}</button></div>`).join('')}</div>`
-   :`<div class="hint2" style="margin-top:10px">${QS.length} سؤال جاهزين، وأسئلتكن بتنخلط معهن عشوائياً.</div>`}
+   :`<div class="hint2" style="margin-top:10px">أسئلتكن بتنخلط مع الأسئلة المختارة عشوائياً.</div>`}
   </div>
   ${SIG}</div>
   <div class="dock"><div class="dock-in"><div class="hint">${on.length<2?'لازم يكون في شخصين عالأقل':'جاهزين؟'}</div>
@@ -818,13 +1012,29 @@ function vLobby(){
  return `<div class="screen ${keyEnter('lobby')}">${topBar()}
   <div class="ticket" style="padding:28px 18px">
    ${avatarHTML(me,96,'margin:0 auto 16px;')}
-   <h2 style="font-size:30px">صرت جوّا القعدة</h2>
-   <p class="muted" style="margin:4px 0 0">ناطرين الريس يبلّش اللعبة</p>
-   <div class="dots" style="margin-top:16px"><span></span><span></span><span></span></div>
+   ${UI.editMe?`<div class="editrow"><input id="myNameIn" class="field" maxlength="22" value="${esc(me.name)}" autocomplete="off"><button class="btn sea mini" data-a="saveMyName">${ic('check')}</button></div>`
+   :`<h2 style="font-size:30px">صرت جوّا القعدة</h2><button class="tag" data-a="editMe" style="margin-top:6px">${ic('pen')} عدّل اسمي</button>`}
+   <p class="muted" style="margin:10px 0 0">ناطرين الريس يبلّش اللعبة</p>
+   <div class="small muted" style="margin-top:4px">${S.left} سؤال · ${S.timer?`مؤقت ${S.timer} ثانية`:'بلا مؤقت'}</div>
+   <div class="dots" style="margin-top:14px"><span></span><span></span><span></span></div>
   </div>
   <div class="sech"><h3>مين جوّا</h3><span class="tag sun">${on.length}</span></div>
   <div class="people">${peopleHTML()}</div>
   ${SIG}</div>`;
+}
+function settingsCard(){
+ const man=H.manual&&H.manual.length?H.manual:null;const cnts=[10,15,20,30,QS.length];
+ const list=UI.pickOpen?`<div class="qpick">${QS.map((q,i)=>{const on=man&&man.includes(i);return `<button class="qp ${on?'on':''}" data-a="toggleQ" data-v="${i}"><span class="qpi">${on?ic('check'):ic(q.i)}</span><span class="qpt">${esc(q.t)}</span><span class="qpn">${esc(q.m)}</span></button>`}).join('')}</div>`:'';
+ return `<div class="sech"><h3>إعدادات اللعبة</h3><span class="tag sun">${lobbyCount()} سؤال</span></div>
+ <div class="card settings">
+  <span class="label" style="margin-top:0">${ic('nag')} كم سؤال؟</span>
+  ${man?`<div class="manual">اخترت ${man.length} ${man.length===1?'سؤال':'سؤال'} بإيدك <button class="tag" data-a="randomQs">رجّعها عشوائي</button></div>`
+   :`<div class="seg">${cnts.map(n=>`<button class="${(H.qcount||20)===n?'on':''}" data-a="setCount" data-v="${n}">${n===QS.length?'كلهن':n}</button>`).join('')}</div>`}
+  <button class="btn flat" data-a="pickOpen" style="margin-top:10px">${ic(UI.pickOpen?'x':'clip')} ${UI.pickOpen?'سكّر القائمة':`اختار الأسئلة بإيدك (${QS.length})`}</button>
+  ${list}
+  <span class="label">${ic('timer')} مؤقت للجواب</span>
+  <div class="seg">${[0,15,30,45,60].map(t=>`<button class="${(H.timer||0)===t?'on':''}" data-a="setTimer" data-v="${t}">${t?t+'ث':'بلا'}</button>`).join('')}</div>
+ </div>`;
 }
 function keyEnter(k){const e=UI.lastKey!==k;UI.nextKey=k;return e?'enter':''}
 function progHTML(num,total,label){
@@ -835,12 +1045,12 @@ function progHTML(num,total,label){
 function vQuestion(){
  const q=S.q;if(UI.rkey!==q.key){UI.rkey=q.key;UI.ranks=[]}
  UI.ranks=UI.ranks.filter(pid=>byId(pid));
- const voted=S.voted.includes(ME);
+ const voted=S.voted.includes(ME);const up=timeUp();
  const online=ROSTER.filter(p=>p.on);
  const nv=S.voted.length;
  const ppl=sshuffle(ROSTER.filter(p=>p.on||UI.ranks.includes(p.pid)),q.key+ME);
  const slots=[0,1,2].map(i=>{const pid=UI.ranks[i];const p=pid&&byId(pid);
-  return `<button class="slot r${i+1} ${p?'on':''}" ${p&&!voted?`data-a="unrank" data-v="${pid}"`:''}><b>${i+1}</b>${p?avatarHTML(p,30)+`<span class="nm">${esc(p.name)}</span>`:'<span>…</span>'}</button>`}).join('');
+  return `<button class="slot r${i+1} ${p?'on':''}" ${p&&!voted&&!up?`data-a="unrank" data-v="${pid}"`:''}><b>${i+1}</b>${p?avatarHTML(p,30)+`<span class="nm">${esc(p.name)}</span>`:'<span>…</span>'}</button>`}).join('');
  const tiles=ppl.map(p=>{const r=UI.ranks.indexOf(p.pid);
   return `<button class="tile ${r>=0?'sel r'+(r+1):''}" data-a="rank" data-v="${p.pid}">${r>=0?`<span class="rk">${r+1}</span>`:''}${avatarHTML(p,60)}<span class="nm">${esc(p.name)}${youTag(p.pid)}</span></button>`}).join('');
  const stack=online.slice(0,9).map(p=>avatarHTML(p,30,'',S.voted.includes(p.pid)?'':'off')).join('');
@@ -851,21 +1061,23 @@ function vQuestion(){
    <button class="btn ghost" data-a="hSilent" ${S.left>0?'':'disabled'}>${ic('skip')} الجاي بلا كشف</button>
   </div>
   <div class="hostmini">
+   ${S.tLeft!=null?`<button data-a="addTime">${ic('timer')} +15ث</button>`:''}
    <button data-a="hPass">${ic('x')} مرّر</button>
    <button data-a="customToggle">${ic('pen')} سؤالك</button>
    <button data-a="hWrap">${ic('flag')} خلّصنا</button>
   </div>`;
  }
- const mine=voted?`<button class="btn flat" data-a="unvote"><span class="sent">${ic('check')} صوتك وصل</span><span class="muted small">· عدّل</span></button>`
-  :`<button class="btn sea" data-a="vote" ${UI.ranks.length?'':'disabled'}>ثبّت صوتي</button>`;
+ const mine=voted?(up?`<div class="waitpill">${ic('check')} صوتك وصل · خلص الوقت</div>`:`<button class="btn flat" data-a="unvote"><span class="sent">${ic('check')} صوتك وصل</span><span class="muted small">· عدّل</span></button>`)
+  :up?`<div class="waitpill">${ic('timer')} خلص الوقت</div>`:`<button class="btn sea" data-a="vote" ${UI.ranks.length?'':'disabled'}>ثبّت صوتي</button>`;
+ const tmr=S.tLeft!=null?`<div class="qtimer ${up?'done':''}" id="tring" style="--p:${up?0:Math.max(0,Math.min(1,(UI.dl-Date.now())/((q.dur||S.timer||30)*1000)))}"><span id="tnum">${up?0:Math.ceil(Math.max(0,UI.dl-Date.now())/1000)}</span></div>`:'';
  const fresh=UI.lastKey!=='q'+q.key;
  return `<div class="screen ${keyEnter('q'+q.key)}">${topBar()}
  ${progHTML(S.asked)}
- <div class="qcard c-${qcolOf(q.key)} ${fresh?'flip':''}"><span class="qn">#${S.asked}</span><span class="bigq">؟</span><div class="qi">${ic(q.i)}</div><div class="lead">مين أكتر حدا</div><h2>${esc(q.t)}؟</h2></div>
+ <div class="qcard c-${qcolOf(q.key)} ${fresh?'flip':''}">${tmr}<span class="qn">#${S.asked}</span><span class="bigq">؟</span><div class="qi">${ic(q.i)}</div><div class="lead">مين أكتر حدا</div><h2>${esc(q.t)}؟</h2></div>
  <div class="voters"><div class="stack">${stack}</div><div class="vcount">${nv}<small> من ${online.length} صوّتوا</small></div></div>
  <div class="tray">${slots}</div>
  <div class="hint2">اختار لحد 3 بالترتيب، الأول هو الأكتر. وفيك تكتفي بواحد أو اتنين.</div>
- <div class="grid ${voted?'locked':''}">${tiles}</div>
+ <div class="grid ${voted||up?'locked':''}">${tiles}</div>
  ${SIG}</div>
  <div class="dock"><div class="dock-in">${mine}${hostbar}</div></div>`;
 }
@@ -919,7 +1131,7 @@ function vBetween(){
  ${SIG}</div>
  <div class="dock"><div class="dock-in">${ROLE==='host'?hostRevealDock():waitPill('الريس عم يحضّر الجاي')}</div></div>`;
 }
-function groupLabel(f){const t=f&&f.type||'شلة';const n=f&&f.name||'';if(n)return t+' '+n;return({'شلة':'الشلة','عيلة':'العيلة','رفقة':'الرفقة'})[t]||t}
+function groupLabel(f){const t=f&&f.type||'شلة';const n=f&&f.name||'';if(n)return t+' '+n;return({'شلة':'الشلة','عيلة':'العيلة','رفقة':'الرفقة','الجيران':'الجيران','ولاد العم':'ولاد العم'})[t]||t}
 function vWrap(){
  if(ROLE!=='host')return `<div class="screen">${topBar()}<div class="wait"><div><div class="dots"><span></span><span></span><span></span></div><h2 style="font-size:30px;margin-top:20px">الريس عم يجهّز النتيجة النهائية</h2><p class="muted">ضبّوا حالكن للصورة الجماعية</p></div></div>${SIG}</div>`;
  const w=UI.wrap;const fromFinal=H&&H.prev==='final';const n=H?H.history.length:0;
@@ -928,14 +1140,15 @@ function vWrap(){
  <h2 class="ptitle">${fromFinal?'عدّل على القعدة':'خلصت السهرة؟'}</h2>
  <p class="muted small" style="margin:0">${fromFinal?'غيّر اللي بدك ياه وارجع للنتيجة.':`${n} ${n===1?'سؤال انحفظ':'أسئلة انحفظت'}. قبل الكشف، عرّفنا على القعدة.`}</p>
  <div><span class="label">مين نحنا؟</span>
- <div class="chips">${GROUP_TYPES.map(t=>`<button class="${w.type===t?'on':''}" data-a="gType" data-v="${t}">${t}</button>`).join('')}</div>
+ <div class="chips">${GROUP_TYPES.map(t=>`<button class="${!w.other&&w.type===t?'on':''}" data-a="gType" data-v="${t}">${t}</button>`).join('')}<button class="${w.other?'on':''}" data-a="gOther">${ic('pen')} غير شي</button></div>
+ ${w.other?`<input id="gTypeIn" class="field" data-in="gtype" maxlength="20" placeholder="مثلاً: صحاب الجامعة، فريق الكورة، بنات الحارة" value="${esc(w.otherText||'')}" style="margin-top:10px">`:''}
  <span class="label">شو اسمها؟ (اختياري)</span>
  <input id="gName" class="field" data-in="gname" maxlength="22" placeholder="مثلاً: الجمعة، حلوبي، السهرانين" value="${esc(w.name)}">
  <div style="margin-top:12px"><span class="tag hot" id="gPreview">رح تطلع: «أكتر حدا من ${esc(groupLabel(w))}»</span></div>
  <span class="label">صورة جماعية (اختياري)</span>
- <label class="gpick ${w.photo?'has':''}" for="fileGroup">${w.photo?`<img src="${w.photo}" alt="">`:`<span style="text-align:center">${ic('camera')}خدوا سيلفي سوا<br><span class="small">أو اختار صورة</span></span>`}</label>
+ <label class="gpick ${w.photo?'has':''}" ${w.photo?'for="fileGroup"':'data-a="selfie" data-v="group"'}>${w.photo?`<img src="${w.photo}" alt="">`:`<span style="text-align:center">${ic('camera')}خدوا سيلفي سوا<br><span class="small">أو اختار صورة</span></span>`}</label>
  <input type="file" id="fileGroup" accept="image/*" hidden data-file="group">
- ${w.photo?`<div style="text-align:center;margin-top:12px"><button class="tag" data-a="rmGroup">شيل الصورة</button></div>`:''}</div>
+ <div class="phbtns"><button class="tag sun" data-a="selfie" data-v="group">${ic('camera')} سيلفي جماعي</button><label class="tag" for="fileGroup">${ic('down')} من الصور</label>${w.photo?`<button class="tag" data-a="rmGroup">${ic('x')} شيل</button>`:''}</div></div>
  ${SIG}</div>
  <div class="dock"><div class="dock-in">${fromFinal?`<button class="btn rose" data-a="hFinal" data-v="all">${ic('check')} احفظ وارجع للنتيجة</button>`
   :n?`<button class="btn rose" data-a="hFinal" data-v="cer">${ic('crown')} حفلة توزيع الألقاب</button><button class="btn ghost" data-a="hFinal" data-v="all">${ic('eye')} اكشف كل النتائج دفعة وحدة</button>`
@@ -1040,6 +1253,46 @@ function installCard(){
   :`<div class="steps"><span>1</span> افتح قائمة المتصفح (⋮)<br><span>2</span> اختار «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية»</div>`;
  return `<div class="install"><div class="iic"><img src="icon-192.png" alt=""></div><div style="min-width:0;flex:1"><div class="it">خلّي اللعبة عموبايلك</div><div class="small muted">بتفتحها متل أي تطبيق بالسهرة الجاية</div></div></div>${how?`<div class="install2">${how}</div>`:''}`;
 }
+function vKicked(){return `<div class="screen">${topBar()}<div class="wait"><div><div class="secret" style="background:var(--rose)">${ic('x')}</div><h2 style="font-size:28px;margin-top:18px">الريس طلّعك من القعدة</h2><p class="muted small">إذا صار غلط، احكي مع الريس يرجّعك.</p><div style="margin-top:18px"><button class="btn ghost" data-a="newGame">رجوع للبداية</button></div></div></div>${SIG}</div>`}
+/* ===== الألواح المنبثقة: التعليمات وإدارة اللاعبين ===== */
+function sheetHTML(){
+ if(!UI.sheet)return '';
+ const body=UI.sheet==='help'?helpHTML():manageHTML();
+ return `<div class="sheet" role="dialog" aria-modal="true"><div class="sback" data-a="closeSheet"></div><div class="spanel"><div class="shead"><h3>${UI.sheet==='help'?'كيف منلعب؟':'إدارة اللاعبين'}</h3><button class="iconbtn sm" data-a="closeSheet" aria-label="سكّر">${ic('x')}</button></div><div class="sbody">${body}</div></div></div>`;
+}
+function helpHTML(){
+ const steps=[
+  ['people','الريس بيفتح القعدة','واحد منكن بيفتح قعدة جديدة وبيصير «الريس». الباقي بيمسحوا الـQR أو بيكتبوا الكود، وبيفوتوا باسمهن وصورتهن.'],
+  ['nag','بيطلع سؤال للكل','«مين أكتر حدا…؟» وبيطلع على كل الموبايلات بنفس اللحظة.'],
+  ['star','صوّت لحد 3 بالترتيب','الأول هو الأكتر وبياخد أكبر حصة من صوتك، وفيك تكتفي بواحد أو اتنين. وعادي تصوّت لحالك.'],
+  ['timer','ثبّت صوتك','إذا الريس حاطط مؤقت، ثبّت قبل ما يخلص الوقت. واللي اخترتو بينبعت لحالو لما يخلص.'],
+  ['eye','الكشف','الريس بيكشف النتيجة فوراً، أو بيخبّيها للآخر. كل شي بينحفظ.'],
+  ['crown','حفلة الألقاب','بالآخر بتنكشف الألقاب لقب ورا لقب، وبالختام نجم السهرة.'],
+  ['camera','صورة القعدة','النتيجة النهائية فيها ألقاب الكل، وصورة ستوري بتحمّلوها وبتشاركوها.']];
+ const host=[['eye','اكشف','النتيجة بتطلع هلأ للكل'],['skip','الجاي بلا كشف','النتيجة بتنحفظ للآخر'],['x','مرّر','السؤال بينمسح كأنو ما انسأل'],['pen','سؤالك','اطرح سؤال من عندك'],['timer','+15ث','زيد وقت للمؤقت'],['flag','خلّصنا','روح عالنتيجة النهائية'],['people','إدارة اللاعبين','عدّل الأسماء، طلّع حدا، أو سلّم الريسة']];
+ return `<ol class="howlist">${steps.map(([i,t,d],k)=>`<li><span class="hi c-${PCOL[k%5]}">${ic(i)}</span><div><b>${t}</b><p>${d}</p></div></li>`).join('')}</ol>
+ <h4>للريس</h4>
+ <div class="hostkeys">${host.map(([i,t,d])=>`<div><span>${ic(i)}</span><b>${t}</b><small>${d}</small></div>`).join('')}</div>
+ <h4>شغلات مهمة</h4>
+ <ul class="notes">
+  <li>ما حدا بيعرف مين صوّت لمين، بس النسب.</li>
+  <li>إذا طلع الريس أو انقطع عندو النت، اللعبة ما بتوقف. بعد شوي بيطلع زر لحدا تاني ياخد الريسة.</li>
+  <li>إذا سكّرت الصفحة بالغلط، افتح نفس الرابط وبترجع لمكانك.</li>
+ </ul>`;
+}
+function manageHTML(){
+ if(ROLE!=='host'||!H)return '';
+ const ps=Object.values(H.players);
+ return `<div class="mlist">${ps.map(p=>{const self=p.pid===ME;const ed=UI.editPid===p.pid;const ck=UI.confirm===p.pid+'|kick';const ch=UI.confirm===p.pid+'|hand';
+  return `<div class="mrow">${avatarHTML(byId(p.pid)||p,44,'',p.on?'':'off')}
+   <div class="mmid">${ed?`<div class="editrow"><input id="editName" class="field" maxlength="22" value="${esc(p.name)}" autocomplete="off"><button class="btn sea mini" data-a="saveName" data-v="${p.pid}">${ic('check')}</button></div>`
+    :`<div class="mn">${esc(p.name)}${self?' (إنت الريس)':''}</div><div class="small muted">${p.bot?'لاعب وهمي':p.on?'متصل':'مو متصل'}</div>`}</div>
+   ${ed?'':`<div class="macts"><button class="iconbtn sm" data-a="editName" data-v="${p.pid}" aria-label="عدّل الاسم">${ic('pen')}</button>
+   ${self?'':`<button class="iconbtn sm ${ck?'warn':''}" data-a="kick" data-v="${p.pid}" aria-label="طلّع">${ck?'أكيد؟':ic('trash')}</button>`}
+   ${!self&&p.on&&!p.bot&&!H.demo&&!LOCAL?`<button class="iconbtn sm ${ch?'warn':''}" data-a="hand" data-v="${p.pid}" aria-label="سلّم الريسة">${ch?'أكيد؟':ic('crown')}</button>`:''}</div>`}
+  </div>`}).join('')}</div>
+  <div class="hint2" style="margin-top:12px">${ic('trash')} بيطلّع اللاعب وما بيقدر يرجع لهالقعدة. ${!H.demo&&!LOCAL?`${ic('crown')} بيسلّم الريسة لهاللاعب وإنت بتصير لاعب عادي.`:''}</div>`;
+}
 function vConnecting(){
  const nh=UI.conn==='nohost',full=UI.conn==='full';
  const t=full?'القعدة مليانة':nh?'ما لقينا القعدة لهلأ':'عم نفوت عالقعدة…';
@@ -1064,7 +1317,9 @@ function confetti(){
 let lastHTML='';
 function render(){
  let html;
- if(UI.screen==='cover')html=vCover();
+ syncTimer();
+ if(UI.kicked)html=vKicked();
+ else if(UI.screen==='cover')html=vCover();
  else if(UI.screen==='code')html=vCode();
  else if(UI.screen==='profile')html=vProfile();
  else if(!S||!byId(ME)&&ROLE==='player'&&S.phase!=='final'&&S.phase!=='cer')html=vConnecting();
@@ -1077,7 +1332,7 @@ function render(){
   case 'final':html=vFinal();break;
   default:html=vConnecting();
  }
- html+=connBanner();
+ html+=connBanner()+sheetHTML();
  UI.lastKey=UI.nextKey||UI.lastKey;
  if(html===lastHTML)return;
  const f=document.activeElement;const fid=f&&f.id;const sel=fid&&f.selectionStart!=null?[f.selectionStart,f.selectionEnd]:null;
@@ -1087,6 +1342,25 @@ function render(){
  if($('#story'))showStory();
  if(UI.boom){UI.boom=null;setTimeout(confetti,350)}
 }
+/* المؤقت عند كل موبايل */
+function syncTimer(){
+ if(!S||S.phase!=='q'||S.tLeft==null||!S.q){UI.dl=null;return}
+ const nd=Date.now()+S.tLeft;
+ if(UI.dlKey!==S.q.key||!UI.dl||Math.abs(UI.dl-nd)>1500){UI.dl=nd;UI.dlKey=S.q.key}
+}
+function timeUp(){return !!(UI.dl&&S&&S.phase==='q'&&Date.now()>=UI.dl)}
+setInterval(()=>{
+ const hw=$('#hwait');if(hw&&UI.hostWait)hw.textContent=Math.max(0,Math.ceil((UI.hostWait-Date.now())/1000));
+ if(!S||S.phase!=='q'||!UI.dl)return;
+ const left=UI.dl-Date.now();const tot=((S.q&&S.q.dur)||S.timer||30)*1000;
+ const n=$('#tnum'),r=$('#tring');
+ if(n)n.textContent=Math.max(0,Math.ceil(left/1000));
+ if(r){r.style.setProperty('--p',Math.max(0,Math.min(1,left/tot)));r.classList.toggle('hurry',left<=5000&&left>0)}
+ if(left<=0&&!UI.expired[S.q.key]){UI.expired[S.q.key]=true;
+  if(ROLE&&!S.voted.includes(ME)&&UI.ranks.length)ACT.vote();
+  try{navigator.vibrate&&navigator.vibrate([60,40,60])}catch(e){}
+  lastHTML='';render()}
+},250);
 function drawQR(el){
  try{const qr=qrcode(0,'M');qr.addData(joinUrl());qr.make();el.innerHTML=qr.createSvgTag({cellSize:6,margin:2,scalable:true})}catch(e){el.textContent=CODE}
 }
@@ -1128,7 +1402,28 @@ const ACT={
  hUnwrap(){HOST.unwrap()},
  customToggle(){UI.customOpen=!UI.customOpen;render();if(UI.customOpen)setTimeout(()=>$('#customIn')&&$('#customIn').focus(),50)},
  hCustom(){const t=UI.customText.trim();if(!t){toast('اكتب السؤال أول');return}UI.customOpen=false;UI.customText='';if(HOST.custom(t,false))toast('رح يطلع السؤال الجاي')},
- gType(t){UI.wrap.type=t;render()},
+ gType(t){UI.wrap.type=t;UI.wrap.other=false;render()},
+ gOther(){UI.wrap.other=true;UI.wrap.type=cleanName(UI.wrap.otherText)||'شلة';render();setTimeout(()=>$('#gTypeIn')&&$('#gTypeIn').focus(),40)},
+ sheet(v){UI.sheet=v;UI.editPid=null;UI.confirm=null;render()},
+ closeSheet(){UI.sheet=null;UI.editPid=null;UI.confirm=null;render()},
+ editName(pid){UI.editPid=pid;UI.confirm=null;render();setTimeout(()=>{const e=$('#editName');if(e){e.focus();e.select()}},40)},
+ saveName(pid){const e=$('#editName');if(e&&cleanName(e.value))HOST.rename(pid,e.value);UI.editPid=null;render()},
+ kick(pid){if(UI.confirm!==pid+'|kick'){UI.confirm=pid+'|kick';render();return}UI.confirm=null;const n=H.players[pid]&&H.players[pid].name;HOST.kick(pid);toast('طلع '+(n||'اللاعب')+' من القعدة')},
+ hand(pid){if(UI.confirm!==pid+'|hand'){UI.confirm=pid+'|hand';render();return}UI.confirm=null;HOST.handover(pid)},
+ claim(){doClaim()},
+ editMe(){UI.editMe=true;render();setTimeout(()=>{const e=$('#myNameIn');if(e){e.focus();e.select()}},40)},
+ saveMyName(){const e=$('#myNameIn');const n=e&&cleanName(e.value);UI.editMe=false;if(n){UI.profile.name=n;savePlayer();NET&&NET.send({t:'myname',pid:ME,name:n})}render()},
+ setCount(n){HOST.setCount(n)},
+ setTimer(t){HOST.setTimer(t)},
+ pickOpen(){UI.pickOpen=!UI.pickOpen;render()},
+ toggleQ(i){HOST.toggleQ(i)},
+ randomQs(){HOST.randomQs()},
+ addTime(){HOST.addTime()},
+ async selfie(k){const group=k==='group';const blob=await openCamera({title:group?'سيلفي جماعي':'التقط سيلفي',group});
+  if(blob===false){const inp=$(group?'#fileGroup':'#camAva');if(inp){if(group)inp.setAttribute('capture','user');inp.click()}return}
+  if(!blob)return;
+  if(group){const d=await cropImage(blob,{aspect:4/5,outW:800,title:'ضبّط الصورة الجماعية'});if(d){UI.wrap.photo=d;render()}}
+  else{const d=await cropImage(blob,{aspect:1,outW:256,round:true,title:'حرّك وكبّر صورتك'});if(d){UI.profile.photo=d;render()}}},
  rmGroup(){UI.wrap.photo=null;render()},
  hFinal(v){HOST.finalize(v)},
  layout(k){UI.layout=k;render()},
@@ -1138,12 +1433,41 @@ const ACT={
 };
 app.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!el||el.disabled)return;const f=ACT[el.dataset.a];if(f)f(el.dataset.v,el)});
 app.addEventListener('input',e=>{const el=e.target;const k=el.dataset.in;if(!k)return;
- if(k==='name')UI.profile.name=el.value;else if(k==='codeInput')UI.codeInput=el.value;else if(k==='customText')UI.customText=el.value;else if(k==='gname'){UI.wrap.name=el.value;const t=document.getElementById('gPreview');if(t)t.textContent='رح تطلع: «أكتر حدا من '+groupLabel({type:UI.wrap.type,name:cleanName(el.value)})+'»'}});
-app.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const id=e.target.id;if(id==='codeIn')ACT.codeGo();else if(id==='nameIn')(UI.asHost?ACT.doHost:ACT.doJoin)();else if(id==='customIn')(S&&S.phase==='q'?ACT.hCustom:ACT.hCustomNow)();else if(id==='extraIn')ACT.addExtra()});
+ if(k==='name')UI.profile.name=el.value;else if(k==='codeInput')UI.codeInput=el.value;else if(k==='customText')UI.customText=el.value;else if(k==='gtype'){UI.wrap.otherText=el.value;UI.wrap.type=cleanName(el.value)||'شلة';const t=document.getElementById('gPreview');if(t)t.textContent='رح تطلع: «أكتر حدا من '+groupLabel({type:UI.wrap.type,name:cleanName(UI.wrap.name)})+'»'}
+ else if(k==='gname'){UI.wrap.name=el.value;const t=document.getElementById('gPreview');if(t)t.textContent='رح تطلع: «أكتر حدا من '+groupLabel({type:UI.wrap.type,name:cleanName(el.value)})+'»'}});
+app.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const id=e.target.id;if(id==='codeIn')ACT.codeGo();else if(id==='nameIn')(UI.asHost?ACT.doHost:ACT.doJoin)();else if(id==='customIn')(S&&S.phase==='q'?ACT.hCustom:ACT.hCustomNow)();else if(id==='extraIn')ACT.addExtra();else if(id==='editName')ACT.saveName(UI.editPid);else if(id==='myNameIn')ACT.saveMyName()});
 app.addEventListener('change',async e=>{const el=e.target;const k=el.dataset.file;if(!k||!el.files||!el.files[0])return;const file=el.files[0];el.value='';
  if(k==='ava'){const d=await cropImage(file,{aspect:1,outW:256,round:true,title:'حرّك وكبّر صورتك'});if(d){UI.profile.photo=d;render()}}
- else if(k==='group'){const d=await cropImage(file,{aspect:4/5,outW:800,title:'ضبّط الصورة الجماعية'});if(d){UI.wrap.photo=d;render()}}
+ else if(k==='group'){el.removeAttribute('capture');const d=await cropImage(file,{aspect:4/5,outW:800,title:'ضبّط الصورة الجماعية'});if(d){UI.wrap.photo=d;render()}}
 });
+
+/* ================= الكاميرا (سيلفي) ================= */
+/* بترجّع صورة، أو null إذا لغى، أو false إذا الكاميرا مو متاحة (منفتح كاميرا الموبايل العادية) */
+function openCamera(o){return new Promise(async resolve=>{
+ if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){resolve(false);return}
+ let facing='user',stream=null,timer=o.group?3:0,busy=false;
+ const ov=document.createElement('div');ov.className='cam';
+ ov.innerHTML=`<div class="hint">${o.title}</div><div class="camst ${o.group?'tall':''}"><video playsinline autoplay muted></video><b class="camcd"></b></div>
+  <div class="camrow"><button class="cbtn" data-c="no" aria-label="إلغاء">${ic('x')}</button><button class="shutter" data-c="shot" aria-label="صوّر"></button><button class="cbtn" data-c="flip" aria-label="بدّل الكاميرا">${ic('flipcam')}</button></div>
+  <button class="tag" data-c="tm">${ic('timer')} مؤقت: <span>${timer?timer+' ثواني':'بلا'}</span></button>`;
+ document.body.appendChild(ov);
+ const v=ov.querySelector('video');const cd=ov.querySelector('.camcd');
+ const stop=()=>{try{stream&&stream.getTracks().forEach(t=>t.stop())}catch(e){}};
+ const start=async()=>{stop();try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:facing,width:{ideal:1280},height:{ideal:1280}},audio:false});v.srcObject=stream;v.style.transform=facing==='user'?'scaleX(-1)':'none';return true}catch(e){return false}};
+ if(!(await start())){ov.remove();resolve(false);return}
+ const done=b=>{stop();ov.remove();resolve(b)};
+ ov.addEventListener('click',async e=>{const b=e.target.closest('[data-c]');if(!b||busy)return;
+  if(b.dataset.c==='no')return done(null);
+  if(b.dataset.c==='flip'){facing=facing==='user'?'environment':'user';await start();return}
+  if(b.dataset.c==='tm'){timer=timer===0?3:timer===3?5:timer===5?10:0;b.querySelector('span').textContent=timer?timer+' ثواني':'بلا';return}
+  if(b.dataset.c==='shot'){busy=true;
+   for(let t=timer;t>0;t--){cd.textContent=t;cd.classList.remove('go');void cd.offsetWidth;cd.classList.add('go');await new Promise(r=>setTimeout(r,1000))}
+   cd.textContent='';const w=v.videoWidth,h=v.videoHeight;if(!w){busy=false;return}
+   const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');
+   if(facing==='user'){x.translate(w,0);x.scale(-1,1)}x.drawImage(v,0,0,w,h);
+   ov.classList.add('flash');c.toBlob(bl=>setTimeout(()=>done(bl),180),'image/jpeg',.9)}
+ });
+})}
 
 /* ================= قص الصورة ================= */
 function cropImage(file,o){return new Promise(resolve=>{
@@ -1352,6 +1676,7 @@ if('serviceWorker' in navigator&&(location.protocol==='https:'||location.hostnam
 (function boot(){
  const r=params.get('r');
  if(r){CODE=r.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,5);
+  try{if(localStorage.getItem('qa3da-kicked-'+CODE)&&!params.has('h')){UI.kicked=true;render();return}}catch(e){}
   const hs=store.get('qa3da-host-'+CODE);
   if(hs&&params.has('h')){resumeHost(hs);return}
   const ps=store.get('qa3da-p-'+CODE);

@@ -1,5 +1,5 @@
 /* عامل الخدمة: بيخلّي اللعبة قابلة للتنزيل كتطبيق، وبيحفظ الملفات الثابتة */
-const C='qa3da-aktar-v2';
+const C='qa3da-aktar-v3';
 const ASSETS=['/vendor/qrcode.js','/favicon.svg','/icon-192.png','/icon-512.png','/manifest.webmanifest'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
